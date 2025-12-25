@@ -5,5 +5,8 @@ build/
 .env
 .env.local
 .DS_Store
-# Ignore the massive crypto repos we cloned for scanning
+# Ignore the massive crypto repos and logs
 cryptobom-repos/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
