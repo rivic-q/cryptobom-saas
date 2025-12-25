@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.local
+.DS_Store
+# Ignore the massive crypto repos we cloned for scanning
+cryptobom-repos/

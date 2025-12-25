@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  rivic-cbom:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rivic-cbom-platform
+    ports:
+      - "8080:8080"
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///data/rivic.db}
+    volumes:
+      - cbom_data:/app/data
+      - ./CBOM:/app/schemas:ro
+      - ./examples:/app/examples:ro
+    networks:
+      - rivic-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Optional: PostgreSQL for production
+  postgres:
+    image: postgres:15-alpine
+    container_name: rivic-postgres
+    environment:
+      POSTGRES_DB: rivic_cbom
+      POSTGRES_USER: rivic_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-rivic_secure_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rivic-network
+    restart: unless-stopped
+    profiles:
+      - production
+
+  # Optional: Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: rivic-redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - rivic-network
+    restart: unless-stopped
+    profiles:
+      - production
+
+networks:
+  rivic-network:
+    driver: bridge
+
+volumes:
+  cbom_data:
+  postgres_data:
+  redis_data:
