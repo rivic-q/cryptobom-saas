@@ -6,6 +6,15 @@ import { Button } from "./ui/button"
 
 const openSourceRepos = [
   {
+    name: "rivic-cbom-scanner",
+    description: "Open source CBOM scanner for basic cryptographic analysis",
+    license: "MIT",
+    stars: "2.5K+",
+    language: "Python",
+    features: ["Basic container scanning", "CycloneDX export", "Simple risk assessment", "Community support"],
+    url: "github.com/rivic-crypto/cbom-scanner",
+  },
+  {
     name: "ml-kem-go",
     description: "Pure ML-KEM implementation in Go - FIPS 203 compliant",
     license: "MIT",
@@ -15,19 +24,28 @@ const openSourceRepos = [
     url: "github.com/rivic-crypto/ml-kem-go",
   },
   {
-    name: "ml-kem-python",
-    description: "ML-KEM Python library with asyncio support",
+    name: "ml-dsa-python",
+    description: "ML-DSA Python library for post-quantum signatures",
     license: "MIT",
     stars: "3K+",
     language: "Python",
     features: ["PyPI distribution", "NumPy acceleration", "Type hints (3.8+)", "Full pytest suite"],
-    url: "github.com/rivic-crypto/ml-kem-python",
+    url: "github.com/rivic-crypto/ml-dsa-python",
+  },
+  {
+    name: "quantum-safe-examples",
+    description: "Example implementations and tutorials for quantum-safe crypto",
+    license: "Apache 2.0",
+    stars: "1K+",
+    language: "Documentation",
+    features: ["Getting started guides", "Integration examples", "Best practices", "Migration tutorials"],
+    url: "github.com/rivic-crypto/quantum-safe-examples",
   },
   {
     name: "rivic-k8s-charts",
-    description: "Kubernetes Helm charts for quantum-safe crypto",
+    description: "Kubernetes Helm charts for quantum-safe deployments",
     license: "Apache 2.0",
-    stars: "1K+",
+    stars: "800+",
     language: "YAML",
     features: ["Helm charts", "Kustomize overlays", "Istio configs", "RBAC templates"],
     url: "github.com/rivic-crypto/rivic-k8s-charts",
@@ -53,12 +71,30 @@ export function OpenSourceSection() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
             <Github className="w-4 h-4 text-emerald-400" />
-            <span className="text-emerald-400 text-sm font-medium">Open Core Model</span>
+            <span className="text-emerald-400 text-sm font-medium">Open Source Foundation</span>
           </div>
-          <h2 className="text-4xl font-bold text-white mb-4">Open Source Libraries</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Production-ready cryptographic libraries under MIT license. Community-driven, audited, and NIST compliant.
+          <h2 className="text-4xl font-bold text-white mb-4">Community-Driven Quantum-Safe Tools</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+            Start your quantum-safe journey with our open source libraries. Community-driven, audited, and NIST compliant.
           </p>
+          <div className="bg-gradient-to-r from-emerald-500/10 via-cyan-500/5 to-blue-500/10 border border-white/10 rounded-xl p-6 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-left">
+                <h3 className="text-lg font-semibold text-white mb-2">Open Source vs Enterprise SaaS</h3>
+                <p className="text-gray-300 text-sm">
+                  Our open source tools provide essential quantum-safe cryptography. 
+                  Upgrade to <strong className="text-cyan-400">Rivic Core SaaS</strong> for enterprise APIs, 
+                  IBM Quantum integration, and full compliance automation.
+                </p>
+              </div>
+              <Button 
+                variant="outline" 
+                className="border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 flex-shrink-0"
+              >
+                Compare Plans
+              </Button>
+            </div>
+          </div>
         </motion.div>
 
         {/* Repository Cards */}

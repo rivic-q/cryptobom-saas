@@ -1,13 +1,55 @@
 {
   "name": "cryptobom-saas",
   "version": "1.0.0",
-  "description": "CryptoBOM SaaS - Quantum-Safe Cryptographic Bill of Materials for EU Banking",
+  "description": "CryptoBOM SaaS - Open Source Quantum-Safe Cryptographic Bill of Materials for EU Banking & Financial Services",
   "private": false,
   "homepage": "https://rivic-q.github.io/cryptobom-saas",
   "repository": {
     "type": "git",
     "url": "https://github.com/rivic-q/cryptobom-saas.git"
   },
+  "bugs": {
+    "url": "https://github.com/rivic-q/cryptobom-saas/issues"
+  },
+  "keywords": [
+    "cbom",
+    "cryptographic-bill-of-materials",
+    "post-quantum-cryptography",
+    "quantum-safe",
+    "eidas-2.0",
+    "dora-compliance",
+    "eu-banking",
+    "financial-services",
+    "ml-kem",
+    "ml-dsa",
+    "nist-pqc",
+    "cyclone-dx",
+    "security-scanning",
+    "crypto-inventory",
+    "open-source",
+    "typescript",
+    "nextjs",
+    "react",
+    "crypto-asset-discovery",
+    "regulatory-compliance",
+    "bsi-tr-02102",
+    "nist-fips-203",
+    "nist-fips-204",
+    "nist-fips-205",
+    "banking-security",
+    "eu-compliance",
+    "cra-cyber-resilience",
+    "open-source-cbom",
+    "cryptographic-inventory",
+    "fintech",
+    "cybersecurity"
+  ],
+  "author": {
+    "name": "Revanande",
+    "email": "rivic.revanande@gmail.com",
+    "url": "https://rivic-q.github.io/cryptobom-saas"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -96,29 +138,6 @@
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   },
-  "keywords": [
-    "cbom",
-    "cryptographic-bill-of-materials",
-    "crypto-asset-discovery",
-    "regulatory-compliance",
-    "bsi-tr-02102",
-    "nist-fips-203",
-    "nist-fips-204",
-    "nist-fips-205",
-    "quantum-safe",
-    "post-quantum-cryptography",
-    "banking-security",
-    "eu-compliance",
-    "eidas-2",
-    "dora-compliance",
-    "cra-cyber-resilience",
-    "open-source-cbom",
-    "cryptographic-inventory",
-    "fintech",
-    "cybersecurity"
-  ],
-  "author": "Rivic-Q Team",
-  "license": "MIT",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"

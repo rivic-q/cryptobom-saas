@@ -31,11 +31,9 @@ export function Header() {
   const navLinks = [
     { href: "/#problem-solution", label: "Solution" },
     { href: "/#architecture", label: "Technology" },
-    { href: "/#whitepaper", label: "Whitepaper" },
-    { href: "/#testimonials", label: "Customers" },
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/compliance", label: "Compliance" },
     { href: "/#pricing", label: "Pricing" },
-    { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
     { href: "/docs", label: "Docs" },
   ]
 
@@ -70,7 +68,7 @@ export function Header() {
               <span className="text-lg">🎅</span>
             </div>
             <div className="text-xs text-white/70 mt-1">
-              🎆 Happy New Year 2025! 🎆
+              🎆 Happy New Year 2026! 🎆
             </div>
           </div>
         </div>

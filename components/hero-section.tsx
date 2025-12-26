@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Particle Animation - Responsive sizing */}
       <div className="flex-1 flex items-start justify-center pt-16 sm:pt-20 lg:pt-24">
         <div className="w-full max-w-7xl">
-          <ParticleTextEffect words={["QSSP", "QUANTUM", "SECURE", "PROTOCOL", "ML-KEM", "ML-DSA", "QMCF", "eIDAS", "DORA"]} />
+          <ParticleTextEffect words={["RIVIC", "QSSP", "QUANTUM", "SECURE", "PROTOCOL", "ML-KEM", "ML-DSA", "QMCF", "eIDAS", "DORA"]} />
         </div>
       </div>
 
@@ -20,8 +20,106 @@ export function HeroSection() {
           {/* Main Headline - Responsive typography */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 text-balance leading-tight">
             Quantum-Safe Security Protocol Framework.{" "}
-            <span className="text-gray-300 block sm:inline mt-2 sm:mt-0">Zero Code Changes. Full Compliance.</span>
+            <span className="text-gray-300 block sm:inline mt-2 sm:mt-0">Open Source Foundation. Enterprise SaaS Platform.</span>
           </h2>
+
+          {/* Subtitle - Clear differentiation */}
+          <p className="text-base sm:text-lg lg:text-xl text-gray-400 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
+            Choose your quantum-safe journey: <strong className="text-emerald-400">Open source tools available now</strong> with streamlined setup, or <strong className="text-yellow-400">join the waitlist for enterprise SaaS APIs</strong> launching February 2026.
+          </p>
+
+          {/* Offering Cards */}
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 max-w-5xl mx-auto">
+            {/* Open Source Card */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-2xl p-6 sm:p-8 text-left hover:border-white/20 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                  <CheckCircle className="h-4 w-4 text-emerald-400" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white">Open Source</h3>
+                <span className="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full">FREE</span>
+              </div>
+              <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
+                Community-driven quantum-safe cryptography tools for developers and small teams. <strong className="text-emerald-400">Available immediately</strong> through streamlined setup.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-emerald-400 flex-shrink-0" />
+                  Basic CBOM scanning
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-emerald-400 flex-shrink-0" />
+                  ML-KEM/ML-DSA implementations
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-emerald-400 flex-shrink-0" />
+                  Community support
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-emerald-400 flex-shrink-0" />
+                  Basic compliance reports
+                </li>
+              </ul>
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-2 text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded px-3 py-1">
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                  Streamlined setup - Ready in minutes
+                </div>
+              </div>
+              <Button 
+                variant="outline" 
+                className="w-full border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10"
+              >
+                Get Started Free
+              </Button>
+            </div>
+
+            {/* SaaS/Enterprise Card */}
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6 sm:p-8 text-left relative overflow-hidden hover:border-cyan-500/30 transition-all duration-300">
+              <div className="absolute top-4 right-4">
+                <span className="text-xs bg-cyan-500 text-black px-3 py-1 rounded-full font-semibold">ENTERPRISE</span>
+              </div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <Shield className="h-4 w-4 text-cyan-400" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white">Rivic Core SaaS</h3>
+              </div>
+              <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
+                Full-featured quantum-safe platform with APIs, IBM Quantum integration, and enterprise support. <strong className="text-yellow-400">Early access available February 2026.</strong>
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                  Complete Rivic Core Neuron
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                  IBM Quantum attestation
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                  Real-time compliance APIs
+                </li>
+                <li className="flex items-center gap-2 text-gray-300 text-sm">
+                  <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                  24/7 enterprise support
+                </li>
+              </ul>
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-2 text-xs text-yellow-400 bg-yellow-500/10 border border-yellow-500/20 rounded px-3 py-1">
+                  <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></span>
+                  Join waitlist - February 2026 launch
+                </div>
+              </div>
+              <Button 
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
+              >
+                Request Demo
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
 
           {/* Feature badges - Responsive grid */}
           <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 lg:mb-10">
@@ -45,16 +143,16 @@ export function HeroSection() {
               size="lg" 
               className="bg-white hover:bg-gray-200 text-black group w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4 px-6 sm:px-8"
             >
-              Request a Demo
+              Explore Open Source
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-gray-600 text-white hover:bg-gray-800 bg-transparent w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4 px-6 sm:px-8"
+              className="border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 bg-transparent w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4 px-6 sm:px-8"
               asChild
             >
-              <a href="/#whitepaper">Read Whitepaper</a>
+              <a href="/#enterprise">Enterprise SaaS Demo</a>
             </Button>
           </div>
 

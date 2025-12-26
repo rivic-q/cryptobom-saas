@@ -1,6 +1,10 @@
 import { Header } from "@/components/header"
 import { HolidayGreeting } from "@/components/holiday-greeting"
 import { HeroSection } from "@/components/hero-section"
+import { OfferingsSection } from "@/components/offerings-section"
+import { CoreEngineSection } from "@/components/core-engine-section"
+import { TechnicalArchitectureSection } from "@/components/technical-architecture-section"
+import { ApiSection } from "@/components/api-section"
 import { PartnerLogos } from "@/components/partner-logos"
 import { ProblemSolutionSection } from "@/components/problem-solution-section"
 import { ArchitectureSection } from "@/components/architecture-section"
@@ -26,6 +30,10 @@ export default function HomePage() {
       <main className="pt-20">
         {/* Hero & Core Value */}
         <HeroSection />
+        <OfferingsSection />
+        <CoreEngineSection />
+        <TechnicalArchitectureSection />
+        <ApiSection />
         <PartnerLogos />
         
         {/* Main Content Sections */}

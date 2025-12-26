@@ -1,4 +1,40 @@
-# 🔒 CryptoBOM ## 🎯 **Overvi### 💡 **Our Solution**
+# 🔒 CryptoBOM SaaS - Quantum-Safe Cryptographic Bill of Materials
+
+> **Leading open source CBOM platform for EU banking quantum security compliance**
+
+[![Deploy to GitHub Pages](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml/badge.svg)](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml)
+### **🏢 Support Tiers**
+- 🆓 **Open Source Community** - GitHub Issues, Discussions, Email Support
+- 💼 **Professional Support** - Priority email support (Available February 2026)
+- 🏢 **Enterprise Support** - Dedicated support team (Available February 2026)
+
+### **📱 Connect With Us**
+- 📧 **Email**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
+- 🐙 **GitHub**: [@rivic-q](https://github.com/rivic-q)
+- 💼 **LinkedIn**: [Connect with Revanande](https://linkedin.com/in/revanande)
+- 🌐 **Website**: [Coming Soon - rivic.io](https://rivic-q.github.io/cryptobom-saas)ertified](https://img.shields.io/badge/NIST-FIPS%20203%2F204%2F205-blue?style=flat-square)](https://csrc.nist.gov/projects/post-quantum-cryptography)
+[![eIDAS 2.0 Ready](https://img.shields.io/badge/eIDAS%202.0-Compliant-green?style=flat-square)](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+[![DORA Ready](https://img.shields.io/badge/DORA-Compliant-green?style=flat-square)](https://www.digital-operational-resilience-act.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/rivic-q/cryptobom-saas?style=flat-square)](https://github.com/rivic-q/cryptobom-saas/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/rivic-q/cryptobom-saas?style=flat-square)](https://github.com/rivic-q/cryptobom-saas/issues)
+
+## 🌐 **Live Demo**
+**Visit**: [https://rivic-q.github.io/cryptobom-saas](https://rivic-q.github.io/cryptobom-saas)
+
+---
+
+## 🎯 **Overview**
+
+**CryptoBOM SaaS** is the leading open source Cryptographic Bill of Materials platform designed specifically for EU banking and financial services. Our comprehensive scanning and analysis solution provides full visibility into cryptographic assets while ensuring quantum-safe migration and compliance with eIDAS 2.0 and DORA regulations.
+
+### 🚨 **The Quantum Threat is Real**
+- **Harvest Now, Decrypt Later (HNDL)** attacks are happening today
+- **eIDAS 2.0 deadline**: September 2026  
+- **Current RSA/ECDSA encryption** will be broken by quantum computers (2030-2035)
+- **Average bank migration time**: 3-5 years without automated tools
+
+### 💡 **Our Solution**
 - 🔍 **CBOM Scanner** - Complete cryptographic asset discovery and analysis
 - 📊 **SaaS Dashboard** - Cloud-based cryptographic inventory management
 - 🔗 **Open Source Core** - Transparent, community-driven CBOM generation
@@ -103,14 +139,14 @@ spec:
 ### **Prerequisites**
 - Node.js 18+ 
 - npm/yarn/pnpm
-- Kubernetes cluster (for production deployment)
+- Git
 
-### **Development Setup**
+### **Installation & Setup**
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/rivic-saas.git
-cd rivic-saas
+git clone https://github.com/rivic-q/cryptobom-saas.git
+cd cryptobom-saas
 
 # Install dependencies  
 npm install --legacy-peer-deps
@@ -120,6 +156,43 @@ npm run dev
 
 # Open in browser
 open http://localhost:3000
+```
+
+### **Open Source Usage**
+
+#### **CBOM Scanner (Available Now)**
+```bash
+# Install the open source CBOM scanner
+npm install -g @rivic/cbom-scanner
+
+# Scan your application for cryptographic assets
+cbom scan --path ./your-app --output cbom-report.json
+
+# Generate compliance report
+cbom report --input cbom-report.json --format eidas-2.0
+```
+
+#### **Integration with CI/CD**
+```yaml
+# GitHub Actions example
+name: CBOM Security Scan
+on: [push, pull_request]
+jobs:
+  cbom-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run CBOM Scanner
+        run: |
+          npx @rivic/cbom-scanner scan --path . --format cycloneDx
+```
+
+### **Enterprise SaaS (February 2026)**
+```bash
+# Join the waitlist for enterprise features
+curl -X POST https://api.rivic.io/waitlist \
+  -H "Content-Type: application/json" \
+  -d '{"email":"cto@yourbank.com","company":"Your Bank"}'
 ```
 
 ### **Production Deployment**
@@ -180,12 +253,14 @@ docker run -p 3000:3000 rivic-app
   - IT Security Managers, Compliance Officers
 - **Secondary**: Fintechs requiring regulatory compliance
 - **Geographic**: European Union (GDPR, eIDAS 2.0, DORA focus)
+- **Open Source Community**: Security researchers, developers, and quantum cryptography enthusiasts
 
 ### **💰 Value Propositions**
 1. **85% Cost Savings** vs manual quantum-safe migration
 2. **2-3 Week Deployment** vs 12+ months traditional approaches  
 3. **Zero Application Downtime** during migration process
 4. **Full EU Compliance** with eIDAS 2.0 and DORA requirements
+5. **Open Source Transparency** - Full code visibility and community contributions
 
 ---
 
@@ -237,37 +312,116 @@ rivic-saas/
 
 ---
 
-## 📞 **Enterprise Sales & Support**
+## 📞 **Community & Support**
 
-### **Contact Information**
-- **Sales**: [sales@rivic.io](mailto:sales@rivic.io)
-- **Technical Support**: [support@rivic.io](mailto:support@rivic.io)
-- **Phone**: +49 155 10480340
-- **Headquarters**: Berlin, Germany
+### **🌍 Community**
+- 💬 **GitHub Discussions** - [Ask questions and share ideas](https://github.com/rivic-q/cryptobom-saas/discussions)
+- 🐛 **Issues** - [Report bugs and request features](https://github.com/rivic-q/cryptobom-saas/issues)
+- 🔀 **Pull Requests** - [Contribute code and improvements](https://github.com/rivic-q/cryptobom-saas/pulls)
+- 📧 **Email**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
 
-### **Support Tiers**
-- 🆓 **Open Source** - Community support via GitHub issues
-- 💼 **Premium** - Email support with 48h SLA
-- 🏢 **Enterprise** - Dedicated support team & phone support
+### **📞 Contact Information**
+- **General Inquiries**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
+- **Business Development**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
+- **Open Source Support**: [GitHub Issues](https://github.com/rivic-q/cryptobom-saas/issues)
+- **Security Reports**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com) (Mark as "SECURITY")
+- **Partnership Inquiries**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
+
+### **🏢 Company Information**
+- **Company**: Rivic Security Solutions
+- **Founder & CEO**: Revanande
+- **Stage**: Pre-Seed Funding Stage
+- **Focus**: Quantum-Safe Cryptography for EU Financial Services
+- **Location**: European Union
+- **Founded**: 2025
+
+### **💼 Business Status**
+- 🌱 **Funding Stage**: Currently seeking pre-seed investment
+- 🔬 **Research Focus**: Post-quantum cryptography and EU compliance
+- 🏦 **Target Market**: EU banking and financial institutions
+- 🚀 **Product Status**: Open source tools available now, enterprise SaaS launching February 2026
+
+### **🏢 Support Tiers**
+- 🆓 **Open Source Community** - GitHub Issues, Discussions, Community Chat
+- 💼 **Professional Support** - Email support with SLA (Available February 2026)
+- 🏢 **Enterprise Support** - Dedicated team, phone support, custom integrations
+
+### **📱 Social Media**
+- 🐦 **Twitter**: [@CryptoBOM_SaaS](https://twitter.com/CryptoBOM_SaaS)
+- 💼 **LinkedIn**: [CryptoBOM SaaS](https://linkedin.com/company/cryptobom-saas)
+- � **Website**: [rivic.io](https://rivic.io)
+
+## 🤝 **Code of Conduct**
+
+We are committed to fostering a welcoming and inclusive community. Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) before participating.
+
+## 🏆 **Contributors**
+
+Thanks to all the amazing contributors who help make CryptoBOM SaaS possible! 
+
+[![Contributors](https://contrib.rocks/image?repo=rivic-q/cryptobom-saas)](https://github.com/rivic-q/cryptobom-saas/graphs/contributors)
+
+### **🌟 Special Recognition**
+- � **Security Research Team** - Vulnerability research and responsible disclosure
+- 📚 **Documentation Team** - Comprehensive guides and tutorials
+- � **Community Managers** - Supporting users and fostering collaboration
+- 🚀 **Core Maintainers** - Ongoing development and project leadership
+
+Want to see your name here? [Check out our Contributing Guide](./CONTRIBUTING.md)!
 
 ---
 
 ## 🤝 **Contributing**
 
-We welcome contributions from the quantum security community!
+We welcome contributions from the quantum security community! This is an open source project and we encourage developers, security researchers, and organizations to contribute.
+
+### **Ways to Contribute**
+- 🐛 **Bug Reports** - Report issues via GitHub Issues
+- 💡 **Feature Requests** - Propose new features or improvements
+- 🔧 **Code Contributions** - Submit pull requests with fixes or features
+- 📚 **Documentation** - Improve docs, tutorials, and examples
+- 🧪 **Testing** - Add test cases and improve coverage
+- 🌍 **Community** - Help other users and spread awareness
 
 ### **Development Process**
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/quantum-enhancement`)
-3. Commit your changes (`git commit -m 'Add ML-KEM-512 support'`)
-4. Push to the branch (`git push origin feature/quantum-enhancement`)
-5. Open a Pull Request
+1. **Fork** the repository on GitHub
+2. **Clone** your fork locally
+3. **Create** a feature branch (`git checkout -b feature/quantum-enhancement`)
+4. **Make** your changes with proper tests
+5. **Commit** your changes (`git commit -m 'Add ML-KEM-512 support'`)
+6. **Push** to your branch (`git push origin feature/quantum-enhancement`)
+7. **Open** a Pull Request with detailed description
 
 ### **Contribution Guidelines**
-- Follow TypeScript best practices
-- Add tests for new features
-- Update documentation
-- Maintain security standards
+- ✅ Follow TypeScript and React best practices
+- ✅ Add comprehensive tests for new features
+- ✅ Update documentation for any API changes
+- ✅ Maintain backward compatibility when possible
+- ✅ Follow security-first development principles
+- ✅ Include performance considerations
+- ✅ Add appropriate error handling
+
+### **Code Standards**
+```bash
+# Lint your code
+npm run lint
+
+# Type checking
+npm run type-check
+
+# Run tests
+npm run test
+
+# Format code
+npm run format
+```
+
+### **Security Contributions**
+For security-related contributions, please:
+1. Review our [Security Policy](SECURITY.md)
+2. Follow responsible disclosure practices
+3. Include security test cases
+4. Document any cryptographic changes thoroughly
 
 ---
 
