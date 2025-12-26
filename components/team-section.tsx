@@ -2,97 +2,48 @@
 
 import { motion } from "framer-motion"
 import { Linkedin, Mail, Building2, GraduationCap, Globe, Users, Award, Briefcase } from "lucide-react"
+import { AnimatedPencilImage } from "@/components/ui/animated-pencil-image"
 
 const founder = {
-  name: "Revan Sai Ande",
-  role: "Founder & CEO",
-  description: "Computer Science Student | Security Researcher | 2hearts Community | Venture Cafe Berlin Ambassador",
-  location: "Berlin, Germany",
-  phone: "+49 15510480340",
+  name: "Revan Ande",
+  role: "Founder & CEO", 
+  description: "Computer Science Student | Security Researcher | Berlin, Germany",
   linkedin: "https://www.linkedin.com/in/revan-sai-ande-988504127",
-  focus: ["Post-quantum cryptography", "Cloud architecture", "Enterprise security", "Startup operations"],
+  focus: ["Post-quantum cryptography", "Cloud architecture", "Enterprise security"],
 }
 
 const supervisor = {
   name: "Prof. Dr. Jean-Pierre Seifert",
   role: "Academic Supervisor",
   organization: "TU Berlin - Security in Telecommunications",
-  address: "Einsteinufer 19, Sekr E 5, 10587 Berlin",
   description: "Leading expert in hardware security and cryptographic implementations",
   email: "jean-pierre.seifert@tu-berlin.de",
-  responsibilities: [
-    "Cryptographic research validation",
-    "Algorithm verification",
-    "Academic partnerships",
-    "Research collaboration",
-  ],
 }
 
 const advisors = [
   {
     name: "Sebastian E. Grodzietzki",
     role: "Technology Advisor",
-    title: "Principal Automation Developer DACH",
     organization: "IBM Technology",
-    roles: ["IBM Quantum Ambassador DACH", "Strategy Lead IBM Club Berlin"],
     email: "sebastian.grodzietzki@ibm.com",
-    phone: "+49-162-168 6343",
     type: "industry",
     color: "blue",
-    responsibilities: ["IBM ecosystem gateway", "Quantum technology insights", "Enterprise introductions"],
   },
   {
     name: "Miłosz Lindner",
-    role: "Ecosystem Advisor",
-    title: "Program Manager",
+    role: "Ecosystem Advisor", 
     organization: "Venture Café Berlin",
     email: "milosz@venturecafeberlin.org",
-    phone: "+49 176 62829114",
     type: "ecosystem",
     color: "emerald",
-    responsibilities: ["Founder mentorship", "Investor introductions", "Networking events"],
   },
   {
     name: "Norbert Herrmann",
     role: "Government Relations",
-    title: "Head of Startup Affairs",
     organization: "Senate Department Berlin",
     email: "Norbert.Herrmann@senweb.berlin.de",
-    phone: "+49 30 9013-8392",
     type: "government",
     color: "amber",
-    responsibilities: ["Government programs", "Grants & funding", "Regulatory guidance"],
-  },
-  {
-    name: "Andrea Dannehl",
-    role: "Incubator Coordinator",
-    title: "Participation & Administration",
-    organization: "Startup Incubator Berlin (HWR)",
-    email: "andrea.dannehl@hwr-berlin.de",
-    type: "incubator",
-    color: "cyan",
-    responsibilities: ["Incubator program", "Business mentorship", "Facility access"],
-  },
-  {
-    name: "Alina Kerner",
-    role: "Start-Up Coach",
-    title: "Gründungsberaterin",
-    organization: "Zukunft.Gründen (ZuG)",
-    email: "alina.kerner@hfwu.de",
-    phone: "+49 7022 201256",
-    type: "coach",
-    color: "purple",
-    responsibilities: ["Business strategy", "Operational guidance", "Financial planning"],
-  },
-  {
-    name: "Augustine Kangni",
-    role: "Acceleration Manager",
-    title: "Program Manager",
-    organization: "Zukunft.Gründen Venture Studio",
-    email: "augustine.kangni@zukunftgruenden.io",
-    type: "acceleration",
-    color: "rose",
-    responsibilities: ["Venture acceleration", "Investor relations", "Investment readiness"],
   },
 ]
 
@@ -138,17 +89,19 @@ export function TeamSection() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Founder Card */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-emerald-500/10 border border-white/10 rounded-2xl p-8">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0">
-                  <Globe className="w-8 h-8 text-cyan-400" />
-                </div>
+              <div className="flex items-start gap-6">
+                <AnimatedPencilImage
+                  src="/placeholder-user.jpg"
+                  alt={founder.name}
+                  width={80}
+                  height={80}
+                  className="rounded-xl flex-shrink-0"
+                  delay={100}
+                />
                 <div className="flex-1">
                   <h4 className="text-2xl font-bold text-white mb-1">{founder.name}</h4>
                   <p className="text-cyan-400 font-medium mb-3">{founder.role}</p>
-                  <p className="text-white/70 text-sm mb-3">{founder.description}</p>
-                  <p className="text-white/50 text-sm mb-4">
-                    {founder.location} | {founder.phone}
-                  </p>
+                  <p className="text-white/70 text-sm mb-4">{founder.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {founder.focus.map((item) => (
@@ -173,24 +126,20 @@ export function TeamSection() {
 
             {/* Supervisor Card */}
             <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-white/10 rounded-2xl p-8">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-8 h-8 text-purple-400" />
-                </div>
+              <div className="flex items-start gap-6">
+                <AnimatedPencilImage
+                  src="/placeholder-user.jpg"
+                  alt={supervisor.name}
+                  width={80}
+                  height={80}
+                  className="rounded-xl flex-shrink-0"
+                  delay={200}
+                />
                 <div className="flex-1">
                   <h4 className="text-2xl font-bold text-white mb-1">{supervisor.name}</h4>
                   <p className="text-purple-400 font-medium mb-1">{supervisor.role}</p>
                   <p className="text-white/60 text-sm mb-2">{supervisor.organization}</p>
-                  <p className="text-white/50 text-xs mb-3">{supervisor.address}</p>
                   <p className="text-white/70 text-sm mb-4">{supervisor.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {supervisor.responsibilities.map((item) => (
-                      <span key={item} className="px-2 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
 
                   <a
                     href={`mailto:${supervisor.email}`}
@@ -261,7 +210,7 @@ export function TeamSection() {
                   <div className={`w-12 h-12 rounded-lg bg-${advisor.color}-500/20 flex items-center justify-center`}>
                     {advisor.type === "industry" ? (
                       <Building2 className={`w-6 h-6 text-${advisor.color}-400`} />
-                    ) : advisor.type === "ecosystem" || advisor.type === "acceleration" ? (
+                    ) : advisor.type === "ecosystem" ? (
                       <Users className={`w-6 h-6 text-${advisor.color}-400`} />
                     ) : advisor.type === "government" ? (
                       <Award className={`w-6 h-6 text-${advisor.color}-400`} />
@@ -275,28 +224,16 @@ export function TeamSection() {
                   </div>
                 </div>
 
-                <p className="text-white/80 text-sm mb-1">{advisor.title}</p>
                 <p className="text-white/60 text-sm mb-3">{advisor.organization}</p>
 
-                {advisor.roles && (
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {advisor.roles.map((role) => (
-                      <span key={role} className="text-xs px-2 py-0.5 bg-white/10 text-white/60 rounded">
-                        {role}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                <div className="pt-3 border-t border-white/10 flex items-center gap-3">
+                <div className="pt-3 border-t border-white/10">
                   <a
                     href={`mailto:${advisor.email}`}
-                    className="inline-flex items-center gap-1 text-white/50 hover:text-white text-xs transition-colors"
+                    className="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm transition-colors"
                   >
-                    <Mail className="w-3 h-3" />
-                    <span>Email</span>
+                    <Mail className="w-4 h-4" />
+                    <span>Contact</span>
                   </a>
-                  {advisor.phone && <span className="text-white/30 text-xs">{advisor.phone}</span>}
                 </div>
               </motion.div>
             ))}

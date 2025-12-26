@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { AnimatedLogo } from "@/components/ui/animated-logo"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight, User } from "lucide-react"
 
@@ -138,17 +139,19 @@ export default function BlogPage() {
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-foreground mb-8">Featured Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredPosts.map((post) => (
+              {featuredPosts.map((post, index) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group block bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-cyan-500/20 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-3xl font-bold text-primary">{post.title[0]}</span>
+                  <AnimatedLogo delay={index * 200}>
+                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-cyan-500/20 flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                        <span className="text-3xl font-bold text-primary">{post.title[0]}</span>
+                      </div>
                     </div>
-                  </div>
+                  </AnimatedLogo>
                   <div className="p-6">
                     <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium mb-3">
                       {post.category}
@@ -183,15 +186,17 @@ export default function BlogPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-8">Recent Articles</h2>
             <div className="space-y-4">
-              {recentPosts.map((post) => (
+              {recentPosts.map((post, index) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group flex flex-col md:flex-row gap-6 p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-300"
                 >
-                  <div className="md:w-48 h-32 flex-shrink-0 bg-gradient-to-br from-foreground/5 to-foreground/10 rounded-lg flex items-center justify-center">
-                    <span className="text-4xl font-bold text-foreground/20">{post.title[0]}</span>
-                  </div>
+                  <AnimatedLogo delay={index * 150}>
+                    <div className="md:w-48 h-32 flex-shrink-0 bg-gradient-to-br from-foreground/5 to-foreground/10 rounded-lg flex items-center justify-center">
+                      <span className="text-4xl font-bold text-foreground/20">{post.title[0]}</span>
+                    </div>
+                  </AnimatedLogo>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">

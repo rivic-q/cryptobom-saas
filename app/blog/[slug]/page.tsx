@@ -1,5 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { AnimatedPencilImage } from "@/components/ui/animated-pencil-image"
+import { AnimatedLogo } from "@/components/ui/animated-logo"
 import Link from "next/link"
 import { Calendar, Clock, ArrowLeft, Share2, Linkedin, Twitter } from "lucide-react"
 
@@ -346,23 +348,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               {post.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-foreground/60">
-              <span>{post.author}</span>
-              <span className="w-1 h-1 rounded-full bg-foreground/30" />
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </span>
-              <span className="w-1 h-1 rounded-full bg-foreground/30" />
-              <span className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                {post.readTime}
-              </span>
-            </div>
+            <AnimatedLogo delay={300}>
+              <div className="flex flex-wrap items-center gap-4 text-foreground/60 p-4 bg-card/50 border border-border/50 rounded-xl">
+                <span>{post.author}</span>
+                <span className="w-1 h-1 rounded-full bg-foreground/30" />
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
+                <span className="w-1 h-1 rounded-full bg-foreground/30" />
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  {post.readTime}
+                </span>
+              </div>
+            </AnimatedLogo>
           </header>
 
           {/* Content */}
@@ -389,11 +393,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   const [, alt, src] = match
                   return (
                     <div key={i} className="my-8">
-                      <img 
-                        src={src} 
-                        alt={alt} 
-                        className="w-full rounded-xl border border-white/10 shadow-2xl"
-                        style={{ maxHeight: '400px', objectFit: 'cover' }}
+                      <AnimatedPencilImage
+                        src={src}
+                        alt={alt}
+                        width={800}
+                        height={400}
+                        className="w-full rounded-xl shadow-2xl"
+                        delay={i * 200}
                       />
                     </div>
                   )

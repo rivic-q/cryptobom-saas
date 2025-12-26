@@ -9,7 +9,6 @@ import { RegulatoryComplianceSection } from "@/components/regulatory-compliance-
 import { OpenSourceSection } from "@/components/open-source-section"
 import { ComplianceDashboard } from "@/components/compliance-dashboard"
 import { SecurityCertificationsSection } from "@/components/security-certifications-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
 import { ROICalculatorSection } from "@/components/roi-calculator-section"
 import { TeamSection } from "@/components/team-section"
 import { RoadmapSection } from "@/components/roadmap-section"
@@ -32,7 +31,6 @@ export default function HomePage() {
         {/* Main Content Sections */}
         <ProblemSolutionSection />
         <ArchitectureSection />
-        <TestimonialsSection />
         
         {/* Technical & Business Info */}
         <WhitepaperSection />

@@ -1,6 +1,8 @@
+import { AnimatedLogo } from "./ui/animated-logo"
+
 export function RivicLogo({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
+    <AnimatedLogo className={`flex items-center space-x-3 ${className}`} delay={100}>
       <div className="flex items-center gap-3">
         {/* Rivic Logo with Quantum Symbol */}
         <div className="relative">
@@ -23,7 +25,7 @@ export function RivicLogo({ className = "" }: { className?: string }) {
           <div className="text-xs text-cyan-400 font-medium tracking-wider">Quantum Safe Security</div>
         </div>
       </div>
-    </div>
+    </AnimatedLogo>
   )
 }
 

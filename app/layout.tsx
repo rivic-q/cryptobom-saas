@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "hybrid cryptography",
     "quantum-resistant algorithms"
   ],
-  authors: [{ name: "Rivic Security Team" }],
+  authors: [{ name: "Revan Ande" }],
   creator: "Rivic",
   publisher: "Rivic GmbH",
   robots: "index, follow",

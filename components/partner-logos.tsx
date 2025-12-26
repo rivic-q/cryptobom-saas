@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { AnimatedLogo } from "./ui/animated-logo"
 
 const partners = [
   {
@@ -60,11 +61,13 @@ export function PartnerLogos() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-20 h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-cyan-500/30 transition-all duration-300">
-                <span className="text-2xl font-bold text-white/70 group-hover:text-cyan-400 transition-colors">
-                  {partner.logo}
-                </span>
-              </div>
+              <AnimatedLogo delay={index * 200}>
+                <div className="w-20 h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-cyan-500/30 transition-all duration-300">
+                  <span className="text-2xl font-bold text-white/70 group-hover:text-cyan-400 transition-colors">
+                    {partner.logo}
+                  </span>
+                </div>
+              </AnimatedLogo>
               <span className="text-xs text-white/40 group-hover:text-white/60 transition-colors">
                 {partner.description}
               </span>
@@ -80,15 +83,17 @@ export function PartnerLogos() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
-            <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-              <span className="text-lg font-bold text-blue-400">IBM</span>
+          <AnimatedLogo delay={800}>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                <span className="text-lg font-bold text-blue-400">IBM</span>
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-semibold text-white">IBM Quantum Network</p>
+                <p className="text-xs text-white/50">Strategic Technology Partnership</p>
+              </div>
             </div>
-            <div className="text-left">
-              <p className="text-sm font-semibold text-white">IBM Quantum Network</p>
-              <p className="text-xs text-white/50">Strategic Technology Partnership</p>
-            </div>
-          </div>
+          </AnimatedLogo>
         </motion.div>
       </div>
     </section>
