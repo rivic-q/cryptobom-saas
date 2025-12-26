@@ -14,8 +14,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   // GitHub Pages deployment configuration
-  basePath: process.env.NODE_ENV === 'production' ? '/rivic-saas' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/rivic-saas/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/cryptobom-saas' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cryptobom-saas/' : '',
 }
 
 export default nextConfig

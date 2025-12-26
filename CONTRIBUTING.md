@@ -1,11 +1,11 @@
-# Contributing to Rivic Quantum-Safe Banking Platform
+# Contributing to CryptoBOM SaaS - Quantum-Safe CBOM Platform
 
-We're excited to have you contribute to Rivic! This document outlines how to contribute to our quantum-safe banking security platform.
+We're excited to have you contribute to CryptoBOM SaaS! This document outlines how to contribute to our open source cryptographic bill of materials platform.
 
 ## 🚀 Quick Start
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/rivic-saas.git`
+2. Clone your fork: `git clone https://github.com/yourusername/cryptobom-saas.git`
 3. Install dependencies: `npm install --legacy-peer-deps`
 4. Start development server: `npm run dev`
 5. Make your changes
@@ -13,28 +13,28 @@ We're excited to have you contribute to Rivic! This document outlines how to con
 
 ## 🎯 Areas for Contribution
 
-### 🔐 Security & Cryptography
-- Post-quantum cryptography implementations
-- Security vulnerability assessments
-- Quantum-safe algorithm optimizations
-- CBOM scanner enhancements
+### � CBOM & Scanning
+- Cryptographic asset discovery algorithms
+- New file format support (SPDX, CycloneDX extensions)
+- Binary analysis improvements
+- Container and cloud scanning capabilities
 
 ### 🏦 Banking & Finance
 - EU compliance features (eIDAS 2.0, DORA)
 - Financial services integrations
 - Regulatory reporting improvements
-- Risk assessment tools
+- Risk assessment algorithms
 
-### 🌐 Frontend & UX
-- User interface improvements
-- Accessibility enhancements
-- Performance optimizations
-- Mobile responsiveness
+### 🌐 SaaS Platform
+- Dashboard improvements
+- API enhancements
+- Multi-tenant architecture
+- Cloud deployment optimizations
 
 ### 📚 Documentation
-- Technical documentation
-- API documentation
-- Security guides
+- CBOM format documentation
+- Integration guides
+- Security best practices
 - Migration tutorials
 
 ## 📋 Development Guidelines
@@ -46,16 +46,16 @@ We're excited to have you contribute to Rivic! This document outlines how to con
 - Add tests for new features
 
 ### Security Requirements
-- All cryptographic changes must be reviewed by security team
+- All cryptographic scanning must follow security best practices
 - Follow NIST guidelines for quantum-safe implementations
 - No hardcoded secrets or credentials
-- Implement proper input validation
+- Implement proper input validation for all scanned inputs
 
 ### Testing
-- Write unit tests for new features
+- Write unit tests for new scanning features
 - Include integration tests for API changes
 - Test security-critical components thoroughly
-- Verify compliance with FIPS standards
+- Verify CBOM format compliance
 
 ## 🔒 Security Disclosure
 
@@ -65,9 +65,9 @@ Do not create public issues for security vulnerabilities.
 
 ## 📞 Contact
 
-- **Development**: dev@rivic.io
-- **Security**: security@rivic.io
-- **General**: hello@rivic.io
+- **Development**: dev@cryptobom.io
+- **Security**: security@cryptobom.io
+- **General**: hello@cryptobom.io
 
 ## 📄 License
 

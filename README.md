@@ -1,15 +1,19 @@
-# 🔒 Rivic - Quantum-Safe Banking Security Platform
+# 🔒 CryptoBOM ## 🎯 **Overview**
 
-> **Leading quantum-safe cryptographic migration platform for EU financial institutions**
+**CryptoBOM SaaS** is the leading open source Cryptographic Bill of Materials platform designed specifically for EU banking and financial services. Our comprehensive scanning and analysis solution provides full visibility into cryptographic assets while ensuring quantum-safe migration and compliance with eIDAS 2.0 and DORA regulations.
 
-[![Deploy to GitHub Pages](https://github.com/yourusername/rivic-saas/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/rivic-saas/actions/workflows/deploy.yml)
+### 🚨 **The Quantum Threat is Real**- Quantum-Safe Cryptographic Bill of Materials
+
+> **Leading open source CBOM platform for EU banking quantum security compliance**
+
+[![Deploy to GitHub Pages](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml/badge.svg)](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml)
 [![NIST Certified](https://img.shields.io/badge/NIST-FIPS%20203%2F204%2F205-blue?style=flat-square)](https://csrc.nist.gov/projects/post-quantum-cryptography)
 [![eIDAS 2.0 Ready](https://img.shields.io/badge/eIDAS%202.0-Compliant-green?style=flat-square)](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 [![DORA Ready](https://img.shields.io/badge/DORA-Compliant-green?style=flat-square)](https://www.digital-operational-resilience-act.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## � **Live Demo**
-**Visit**: [https://yourusername.github.io/rivic-saas](https://yourusername.github.io/rivic-saas)
+**Visit**: [https://rivic-q.github.io/cryptobom-saas](https://rivic-q.github.io/cryptobom-saas)
 
 ---
 
@@ -24,9 +28,9 @@
 - **Average bank migration time**: 3-5 years without automated tools
 
 ### 💡 **Our Solution**
-- ⚡ **Zero-Code Migration** - Deploy without modifying application code
-- 🏗️ **Three-Layer Architecture** - CBOM Scanner, Q-Hook Runtime, Governance Plane
-- 🛡️ **NIST Certified** - ML-KEM/ML-DSA algorithms (FIPS 203/204/205)
+- 🔍 **CBOM Scanner** - Complete cryptographic asset discovery and analysis
+- 📊 **SaaS Dashboard** - Cloud-based cryptographic inventory management
+- � **Open Source Core** - Transparent, community-driven CBOM generation
 - 🇪🇺 **EU Compliance First** - Built for eIDAS 2.0 and DORA requirements
 
 ---
@@ -36,7 +40,7 @@
 ### **Layer 1: CBOM Scanner** - Build-Time Inspector
 ```bash
 # Comprehensive cryptographic asset discovery
-rivic scan --path ./banking-app --format cyclonedx
+cryptobom scan --path ./banking-app --format cyclonedx
 ```
 - Source code AST analysis for crypto calls
 - Binary inspection with symbol table parsing  

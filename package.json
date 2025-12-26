@@ -1,12 +1,12 @@
 {
-  "name": "rivic-quantum-safe-banking",
+  "name": "cryptobom-saas",
   "version": "1.0.0",
-  "description": "Quantum-Safe Banking Security Platform for EU Financial Services",
+  "description": "CryptoBOM SaaS - Quantum-Safe Cryptographic Bill of Materials for EU Banking",
   "private": false,
-  "homepage": "https://yourusername.github.io/rivic-saas",
+  "homepage": "https://rivic-q.github.io/cryptobom-saas",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/rivic-saas.git"
+    "url": "https://github.com/rivic-q/cryptobom-saas.git"
   },
   "scripts": {
     "build": "next build",
@@ -97,19 +97,21 @@
     "typescript": "^5"
   },
   "keywords": [
+    "cbom",
+    "cryptographic-bill-of-materials",
+    "crypto-asset-discovery",
     "quantum-safe",
     "post-quantum-cryptography",
     "banking-security",
     "eu-compliance",
     "eidas-2",
     "dora-compliance",
-    "ml-kem",
-    "ml-dsa",
-    "cbom-scanner",
+    "open-source-cbom",
+    "cryptographic-inventory",
     "fintech",
     "cybersecurity"
   ],
-  "author": "Rivic Security Team",
+  "author": "Rivic-Q Team",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",

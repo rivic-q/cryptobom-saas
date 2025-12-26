@@ -5,19 +5,20 @@ import ClientLayout from "./ClientLayout"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Rivic - Quantum-Safe Banking Security | Zero-Code PQC Migration for EU Financial Services",
+  title: "CryptoBOM SaaS - Quantum-Safe CBOM Scanner | Open Source Cryptographic Asset Discovery",
   description:
-    "Leading quantum-safe cryptographic platform for EU banking. CBOM Scanner, Q-Hook Runtime, zero-code migration to ML-KEM/ML-DSA. eIDAS 2.0 & DORA compliant. IBM Quantum certified. Deploy in 2-3 weeks, save millions vs manual migration.",
+    "Leading open source Cryptographic Bill of Materials platform for EU banking. Complete crypto asset discovery, quantum-safe analysis, eIDAS 2.0 & DORA compliance. Deploy CBOM scanning in minutes, get full visibility into cryptographic risks.",
   keywords: [
+    "cryptographic bill of materials",
+    "CBOM scanner", 
     "quantum-safe cryptography",
     "post-quantum cryptography",
-    "PQC migration", 
+    "crypto asset discovery",
     "EU banking security",
     "eIDAS 2.0 compliance",
     "DORA compliance",
-    "CBOM scanner",
-    "ML-KEM",
-    "ML-DSA", 
+    "open source CBOM",
+    "cryptographic inventory", 
     "NIST FIPS 203",
     "NIST FIPS 204",
     "NIST FIPS 205",

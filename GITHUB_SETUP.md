@@ -1,28 +1,22 @@
 # GitHub Repository Setup Guide
 
-## 1. Create GitHub Repository
+## ✅ Repository Already Created!
 
-1. Go to [github.com](https://github.com) and log into your account
-2. Click "New repository" or go to https://github.com/new
-3. Repository name: `rivic-saas` (or your preferred name)
-4. Description: `Quantum-Safe Banking Security Platform for EU Financial Services`
-5. Make it **Public** (required for GitHub Pages free tier)
-6. **Do NOT** initialize with README, .gitignore, or license (we already have these)
-7. Click "Create repository"
+Your repository is already available at: **https://github.com/rivic-q/cryptobom-saas.git**
 
-## 2. Add Remote and Push
+## 🔗 Connect to Existing Repository
 
-After creating the repository, run these commands in your terminal:
+Since the repository already exists, you just need to connect your local code:
 
 ```bash
 cd "/Users/ande/Downloads/Rivic Saas main"
 
-# Add your GitHub repository as remote (replace USERNAME with your GitHub username)
-git remote add origin https://github.com/USERNAME/rivic-saas.git
+# Add the existing GitHub repository as remote
+git remote add origin https://github.com/rivic-q/cryptobom-saas.git
 
-# Push to GitHub
+# Push to GitHub (force push since repo exists)
 git branch -M main
-git push -u origin main
+git push -u origin main --force
 ```
 
 ## 3. Enable GitHub Pages
@@ -69,13 +63,11 @@ To use a custom domain:
 3. Configure DNS with your domain provider
 4. Update URLs in the codebase accordingly
 
-## 7. Site URLs
-
-After deployment, your site will be available at:
-- Main site: `https://USERNAME.github.io/rivic-saas/`
-- Blog: `https://USERNAME.github.io/rivic-saas/blog`
-- Demo: `https://USERNAME.github.io/rivic-saas/demo`
-- Documentation: `https://USERNAME.github.io/rivic-saas/docs`
+## 🌐 **Your Live Site URLs**
+- **Homepage**: `https://rivic-q.github.io/cryptobom-saas/`
+- **Blog**: `https://rivic-q.github.io/cryptobom-saas/blog`
+- **Demo**: `https://rivic-q.github.io/cryptobom-saas/demo`
+- **Documentation**: `https://rivic-q.github.io/cryptobom-saas/docs`
 
 ## Troubleshooting
 

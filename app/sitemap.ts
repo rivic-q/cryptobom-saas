@@ -2,7 +2,7 @@ import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NODE_ENV === 'production' 
-    ? "https://yourusername.github.io/rivic-saas"
+    ? "https://rivic-q.github.io/cryptobom-saas"
     : "http://localhost:3000"
   
   return [
