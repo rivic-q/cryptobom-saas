@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "public_repository": "rivic-q/cryptobom-saas",
+  "private_repository": "rivic-q/rivic-enterprise",
+  "sync_rules": {
+    "documentation": {
+      "source": [
+        "README.md",
+        "CONTRIBUTING.md", 
+        "SECURITY.md",
+        "CHANGELOG.md",
+        "docs/"
+      ],
+      "destination": "public-docs/",
+      "auto_sync": true
+    },
+    "api_specifications": {
+      "source": [
+        "app/api/v1/cbom/",
+        "components/open-source-*.tsx"
+      ],
+      "destination": "api-specs/",
+      "auto_sync": true
+    },
+    "exclude_patterns": [
+      "**/rivic-core-*",
+      "**/enterprise-*",
+      "**/private-*",
+      "app/dashboard/",
+      "app/api/v1/monitoring/",
+      "app/api/v1/quantum/"
+    ]
+  },
+  "notifications": {
+    "email": "rivic.revanande@gmail.com",
+    "on_success": true,
+    "on_failure": true
+  },
+  "security": {
+    "scan_before_sync": true,
+    "exclude_secrets": true,
+    "require_review": false
+  }
+}
