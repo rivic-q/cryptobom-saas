@@ -4,34 +4,34 @@ import { motion } from "framer-motion"
 
 const partners = [
   {
-    name: "IBM",
+    name: "IBM Quantum",
     logo: "IBM",
-    description: "Quantum Partner",
+    description: "Strategic Technology Partner",
   },
   {
-    name: "Startup Incubator Berlin",
-    logo: "SIB",
-    description: "Incubator Partner",
+    name: "Microsoft Azure",
+    logo: "MSFT",
+    description: "Cloud Infrastructure Partner",
   },
   {
-    name: "HWR Berlin",
-    logo: "HWR",
-    description: "Academic Partner",
-  },
-  {
-    name: "Berlin Quantum Alliance",
-    logo: "BQ",
-    description: "Quantum Ecosystem",
-  },
-  {
-    name: "TU Berlin",
-    logo: "TUB",
-    description: "Research Partner",
+    name: "Red Hat OpenShift",
+    logo: "RH",
+    description: "Enterprise Kubernetes Partner",
   },
   {
     name: "CNCF",
     logo: "CNCF",
-    description: "Cloud Native",
+    description: "Cloud Native Foundation",
+  },
+  {
+    name: "BSI Germany",
+    logo: "BSI",
+    description: "Regulatory Authority Partner",
+  },
+  {
+    name: "NIST",
+    logo: "NIST",
+    description: "Cryptographic Standards",
   },
 ]
 
@@ -46,8 +46,8 @@ export function PartnerLogos() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-white/50 uppercase tracking-widest mb-2">Trusted Partners & Ecosystem</p>
-          <h3 className="text-xl font-semibold text-white">Backed by Leading Institutions</h3>
+          <p className="text-sm text-white/50 uppercase tracking-widest mb-2">Strategic Technology Partners</p>
+          <h3 className="text-xl font-semibold text-white">Enterprise-Grade Partnership Ecosystem</h3>
         </motion.div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
@@ -85,8 +85,8 @@ export function PartnerLogos() {
               <span className="text-lg font-bold text-blue-400">IBM</span>
             </div>
             <div className="text-left">
-              <p className="text-sm font-semibold text-white">IBM Quantum Network Partner</p>
-              <p className="text-xs text-white/50">Quantum-Safe Cryptography Initiative</p>
+              <p className="text-sm font-semibold text-white">IBM Quantum Network</p>
+              <p className="text-xs text-white/50">Strategic Technology Partnership</p>
             </div>
           </div>
         </motion.div>

@@ -57,9 +57,26 @@ export function Header() {
           }
         `}
       >
-        <Link href="/" className="transform transition-transform duration-200 hover:scale-105">
+        {/* Logo - Left Side */}
+        <Link href="/" className="transform transition-transform duration-200 hover:scale-105 flex-shrink-0">
           <RivicLogo />
         </Link>
+
+        {/* Holiday Greeting - Center */}
+        <div className="hidden md:flex items-center justify-center flex-1 mx-8">
+          <div className="text-center">
+            <div className="flex items-center gap-2 text-cyan-400 font-semibold">
+              <span className="text-lg">🎄</span>
+              <span className="text-sm">Happy Holidays & Merry Christmas</span>
+              <span className="text-lg">🎅</span>
+            </div>
+            <div className="text-xs text-white/70 mt-1">
+              🎆 Happy New Year 2025! 🎆
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation & Actions - Right Side */}
 
         <div className="flex items-center gap-6">
           <nav className="hidden xl:flex items-center gap-1">
@@ -122,6 +139,18 @@ export function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="xl:hidden mt-2 p-4 rounded-xl bg-background/95 backdrop-blur-lg border border-border/30 shadow-lg max-h-[70vh] overflow-y-auto">
+          {/* Mobile Holiday Greeting */}
+          <div className="mb-4 p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-center">
+            <div className="flex items-center justify-center gap-2 text-cyan-400 text-sm font-semibold mb-1">
+              <span>🎄</span>
+              <span>Happy Holidays & Merry Christmas</span>
+              <span>🎅</span>
+            </div>
+            <div className="text-xs text-white/70">
+              🎆 Happy New Year 2025! 🎆
+            </div>
+          </div>
+
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link

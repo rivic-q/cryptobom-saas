@@ -3,7 +3,7 @@ import { RivicLogo } from "./rivic-logo"
 import { Github, Linkedin, Twitter, Instagram, Mail, MapPin, Phone, ExternalLink } from "lucide-react"
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: "https://github.com/rivic-crypto", label: "rivic-crypto" },
+  { name: "GitHub", icon: Github, href: "https://github.com/rivic-q", label: "rivic-q (Open Source)" },
   {
     name: "LinkedIn",
     icon: Linkedin,
@@ -15,12 +15,12 @@ const socialLinks = [
 ]
 
 const partners = [
-  { name: "IBM", label: "Quantum Partner", color: "blue" },
-  { name: "SIB", label: "Incubator", color: "cyan" },
-  { name: "HWR", label: "Berlin", color: "emerald" },
-  { name: "BQ", label: "Alliance", color: "purple" },
-  { name: "CNCF", label: "Compatible", color: "blue" },
-  { name: "TUB", label: "Research", color: "red" },
+  { name: "IBM", label: "Quantum Network", color: "blue" },
+  { name: "MSFT", label: "Azure Partner", color: "cyan" },
+  { name: "RedHat", label: "OpenShift Certified", color: "red" },
+  { name: "CNCF", label: "Cloud Native", color: "blue" },
+  { name: "BSI", label: "Germany Certified", color: "green" },
+  { name: "NIST", label: "Standards Compliant", color: "purple" },
 ]
 
 export function Footer() {
@@ -29,7 +29,7 @@ export function Footer() {
       <div className="container mx-auto">
         {/* Partners Banner */}
         <div className="mb-12 pb-12 border-b border-white/10">
-          <p className="text-center text-sm text-white/40 mb-6">Partners & Certifications</p>
+          <p className="text-center text-sm text-white/40 mb-6">Strategic Technology Partners & Certifications</p>
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
             {partners.map((partner) => (
               <div
@@ -67,8 +67,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:contact@rivic.io" className="hover:text-white transition-colors">
-                  contact@rivic.io
+                <a href="mailto:Rivic.revan.ande@gmail.com" className="hover:text-white transition-colors">
+                  Rivic.revan.ande@gmail.com
                 </a>
               </div>
             </div>
