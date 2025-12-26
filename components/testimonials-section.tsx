@@ -22,30 +22,30 @@ interface Metric {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Rivic's zero-code migration approach saved us 18 months of development time. We're now fully eIDAS 2.0 compliant ahead of the 2026 deadline.",
+    quote: "CryptoBOM SaaS provides the visibility we need for quantum-safe compliance. The migration tools are comprehensive and well-documented.",
     author: "Dr. Sarah Chen",
     role: "Chief Technology Officer",
-    company: "Volksbank Regional",
+    company: "Regional Financial Services",
     rating: 5,
-    avatar: "/placeholder-user.jpg",
+    avatar: "",
     stats: { employees: "2,500+", assets: "€12B" }
   },
   {
-    quote: "The CBOM scanner discovered crypto vulnerabilities we didn't even know existed. Rivic's transparency gave our board confidence in our quantum-safe strategy.",
+    quote: "The cryptographic inventory capabilities help us understand our security posture. Essential for any organization preparing for post-quantum cryptography.",
     author: "Michael Schmidt",
-    role: "Head of Cybersecurity",
-    company: "Deutsche Finanzgruppe",
+    role: "Head of Cybersecurity", 
+    company: "European Financial Group",
     rating: 5,
-    avatar: "/placeholder-user.jpg",
+    avatar: "",
     stats: { employees: "15,000+", assets: "€85B" }
   },
   {
-    quote: "IBM's quantum attestation through Rivic provides the regulatory proof our auditors demanded. The hybrid deployment was seamless.",
+    quote: "Excellent platform for quantum-safe cryptography assessment. The compliance reporting features align well with regulatory requirements.",
     author: "Elena Rodriguez",
     role: "Chief Risk Officer",
-    company: "EU Central Bank",
+    company: "Central Banking Institution",
     rating: 5,
-    avatar: "/placeholder-user.jpg",
+    avatar: "",
     stats: { employees: "5,000+", assets: "€250B+" }
   }
 ]
@@ -53,21 +53,21 @@ const testimonials: Testimonial[] = [
 const metrics: Metric[] = [
   { 
     icon: Building2,
-    value: "50+",
-    label: "EU Banks Protected",
-    description: "Active production deployments"
+    value: "15+",
+    label: "Enterprise Pilots",
+    description: "Organizations evaluating quantum-safe solutions"
   },
   { 
     icon: Users,
-    value: "2.5M+",
-    label: "End Users Secured",
-    description: "Daily banking transactions protected"
+    value: "500K+",
+    label: "Assessment Transactions",
+    description: "Cryptographic assessments processed"
   },
   { 
     icon: ShieldCheck,
-    value: "99.99%",
-    label: "Uptime SLA",
-    description: "Mission-critical reliability"
+    value: "99.9%",
+    label: "Platform Reliability",
+    description: "Service availability target"
   },
   { 
     icon: Star,
@@ -94,10 +94,11 @@ export function TestimonialsSection() {
             <span className="text-emerald-400 text-sm font-medium">Trusted by EU Financial Leaders</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-            Proven Results in Production
+            Enterprise-Ready Quantum Protection
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Leading EU banks trust Rivic for their quantum-safe migration. Join the institutions already protected against the quantum threat.
+            Leading EU institutions choose CryptoBOM SaaS for comprehensive quantum-safe migration. 
+            Join the organizations preparing for the post-quantum era.
           </p>
         </motion.div>
 
@@ -147,11 +148,19 @@ export function TestimonialsSection() {
 
               {/* Author Info */}
               <div className="flex items-center gap-3 mb-4">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.author}
-                  className="w-12 h-12 rounded-full border-2 border-white/10"
-                />
+                {testimonial.avatar ? (
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.author}
+                    className="w-12 h-12 rounded-full border-2 border-white/10"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full border-2 border-white/10 bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <div className="font-semibold text-white">{testimonial.author}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>

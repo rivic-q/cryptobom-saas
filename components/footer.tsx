@@ -52,6 +52,14 @@ export function Footer() {
               zero-code migration, full compliance, and IBM Quantum attestation.
             </p>
             <p className="text-sm text-white/50 italic mb-6">"Building Quantum-Safe Security for Tomorrow"</p>
+            
+            {/* Made with Love */}
+            <div className="mb-6 p-3 bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/20 rounded-lg text-center">
+              <p className="text-sm text-white/80">
+                <span className="text-red-400">❤️</span> Made with Love in Berlin, Germany <span className="text-red-400">❤️</span>
+              </p>
+              <p className="text-xs text-white/60 mt-1">Securing Europe's Digital Future</p>
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6 text-sm text-white/60">
@@ -174,8 +182,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#roadmap" className="hover:text-cyan-400 transition-colors">
-                  Roadmap
+                <Link href="/whitepaper" className="hover:text-cyan-400 transition-colors">
+                  Whitepaper (Coming Soon)
                 </Link>
               </li>
               <li>
@@ -208,15 +216,21 @@ export function Footer() {
             <span className="px-2 py-1 bg-white/5 rounded">eIDAS 2.0 Ready</span>
           </div>
           <div className="flex gap-6 text-white/50 text-sm">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Imprint
-            </a>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/imprint" className="hover:text-white transition-colors">
+              Legal Imprint
+            </Link>
+            <Link href="/dpo" className="hover:text-white transition-colors">
+              DPO Contact
+            </Link>
+            <Link href="/compliance" className="hover:text-white transition-colors">
+              GDPR Compliance
+            </Link>
           </div>
         </div>
       </div>

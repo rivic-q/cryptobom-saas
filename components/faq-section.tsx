@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "How long does deployment take?",
     answer:
-      "Typical deployment timeline: 2-3 weeks for sandbox POC, 8 weeks to production. We offer an 8-week pilot program with full CBOM generation and compliance dashboard. POC to production conversion rate is 60-70%.",
+      "Deployment timeline varies by organization size and complexity. We typically start with a 2-3 week evaluation phase, followed by a structured pilot program. Our team provides comprehensive support throughout the implementation process to ensure successful adoption.",
   },
   {
     question: "What is the eIDAS 2.0 deadline?",
