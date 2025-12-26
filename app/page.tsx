@@ -13,6 +13,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { ROICalculatorSection } from "@/components/roi-calculator-section"
 import { TeamSection } from "@/components/team-section"
 import { RoadmapSection } from "@/components/roadmap-section"
+import { WhitepaperSection } from "@/components/whitepaper-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FAQSection } from "@/components/faq-section"
 import { AnimatedCTASection } from "@/components/animated-cta-section"
@@ -24,35 +25,22 @@ export default function HomePage() {
       <HolidayGreeting />
       <Header />
       <main className="pt-20">
-        {/* Core Value Proposition */}
+        {/* Hero & Core Value */}
         <HeroSection />
         <PartnerLogos />
         
-        {/* Problem & Solution */}
+        {/* Main Content Sections */}
         <ProblemSolutionSection />
         <ArchitectureSection />
-        
-        {/* Competitive Advantage */}
-        <CompetitiveComparisonSection />
-        <RegulatoryComplianceSection />
-        <SecurityCertificationsSection />
-        
-        {/* Social Proof & Trust */}
         <TestimonialsSection />
-        <ComplianceDashboard />
         
-        {/* Business Value */}
-        <ROICalculatorSection />
-        
-        {/* Product Details */}
-        <OpenSourceSection />
-        <RoadmapSection />
-        
-        {/* Company & Pricing */}
-        <TeamSection />
+        {/* Technical & Business Info */}
+        <WhitepaperSection />
+        <RegulatoryComplianceSection />
         <PricingSection />
         
-        {/* Support & Conversion */}
+        {/* Company Info */}
+        <TeamSection />
         <FAQSection />
         <AnimatedCTASection />
       </main>

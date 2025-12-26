@@ -29,15 +29,14 @@ export function Header() {
   }, [lastScrollY])
 
   const navLinks = [
-    { href: "/#problem-solution", label: "Product" },
-    { href: "/#architecture", label: "Architecture" },
-    { href: "/cncf", label: "CNCF" },
-    { href: "/integration", label: "Integration" },
-    { href: "/#compliance", label: "Compliance" },
-    { href: "/compliance", label: "Dashboard" },
-    { href: "/docs", label: "Docs" },
-    { href: "/demo", label: "Demo" },
+    { href: "/#problem-solution", label: "Solution" },
+    { href: "/#architecture", label: "Technology" },
+    { href: "/#whitepaper", label: "Whitepaper" },
+    { href: "/#testimonials", label: "Customers" },
+    { href: "/#pricing", label: "Pricing" },
+    { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
+    { href: "/docs", label: "Docs" },
   ]
 
   return (

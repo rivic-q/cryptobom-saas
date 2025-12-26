@@ -52,8 +52,9 @@ export function HeroSection() {
               size="lg" 
               variant="outline" 
               className="border-gray-600 text-white hover:bg-gray-800 bg-transparent w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4 px-6 sm:px-8"
+              asChild
             >
-              Read Whitepaper
+              <a href="/#whitepaper">Read Whitepaper</a>
             </Button>
           </div>
 

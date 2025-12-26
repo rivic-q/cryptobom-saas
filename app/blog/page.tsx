@@ -10,7 +10,7 @@ const blogPosts = [
     title: "Why the Quantum Threat Matters Now: HNDL Attacks Are Already Happening",
     excerpt:
       "Harvest Now, Decrypt Later (HNDL) attacks are not a future threat - they're happening today. Learn why EU banks need to act before quantum computers break current encryption.",
-    author: "Rivic Team",
+    author: "QMCF Team",
     date: "2025-01-15",
     readTime: "8 min read",
     category: "Quantum Security",
@@ -21,7 +21,7 @@ const blogPosts = [
     title: "eIDAS 2.0 Deadline: What EU Financial Institutions Need to Know",
     excerpt:
       "The January 2027 deadline for eIDAS 2.0 compliance is approaching fast. Here's your complete guide to quantum-safe identity frameworks and what changes you need to make.",
-    author: "Rivic Team",
+    author: "QMCF Team",
     date: "2025-01-10",
     readTime: "12 min read",
     category: "Compliance",

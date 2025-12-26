@@ -5,12 +5,18 @@ import ClientLayout from "./ClientLayout"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "CryptoBOM SaaS - EU Regulatory Compliant CBOM Scanner | BSI, NIST PQC, DORA, CRA Ready",
+  title: "QMCF - Quantum Mesh Cryptographic Foundation | EU Banking Quantum-Safe Security Platform",
   description:
-    "Leading regulatory compliant Cryptographic Bill of Materials platform. BSI TR-02102, NIST FIPS 203/204/205, DORA, CRA, and eIDAS 2.0 ready. Complete crypto asset discovery for EU banking quantum security compliance.",
+    "Quantum Mesh Cryptographic Foundation (QMCF) - Leading quantum-safe security platform for EU banking. Zero-code post-quantum cryptography migration, CBOM scanning, eIDAS 2.0 & DORA compliance. Enterprise-ready quantum protection.",
   keywords: [
+    "quantum mesh cryptographic foundation",
+    "qmcf platform",
+    "quantum-safe banking",
+    "post-quantum cryptography",
+    "eu banking security",
+    "zero-code migration", 
+    "cbom scanner",
     "cryptographic bill of materials",
-    "CBOM scanner", 
     "regulatory compliance",
     "BSI TR-02102",
     "NIST FIPS 203",
@@ -55,23 +61,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rivic.io",
-    siteName: "Rivic - Quantum-Safe Banking Security",
-    title: "Rivic - Leading Quantum-Safe Security for EU Banking",
-    description: "Zero-code quantum-safe cryptographic migration for EU financial institutions. eIDAS 2.0 & DORA compliant. Deploy in weeks, not years.",
+    siteName: "QMCF - Quantum Mesh Cryptographic Foundation",
+    title: "QMCF - Quantum-Safe Banking Security for EU Financial Institutions",
+    description: "Quantum Mesh Cryptographic Foundation (QMCF) provides zero-code quantum-safe cryptographic migration for EU banking. eIDAS 2.0 & DORA compliant. Deploy quantum protection in weeks, not years.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rivic Quantum-Safe Banking Security Platform",
+        alt: "QMCF Quantum Mesh Cryptographic Foundation Platform",
         type: "image/png"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rivic - Quantum-Safe Banking Security",
-    description: "Zero-code PQC migration for EU banks. eIDAS 2.0 ready, DORA compliant. Deploy quantum-safe crypto in weeks.",
+    title: "QMCF - Quantum Mesh Cryptographic Foundation",
+    description: "Zero-code quantum-safe migration for EU banks. eIDAS 2.0 ready, DORA compliant. Deploy quantum-safe crypto in weeks with QMCF.",
     creator: "@RivicSecurity",
     site: "@RivicSecurity",
     images: [

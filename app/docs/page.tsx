@@ -1,5 +1,6 @@
 "use client"
 
+import { Metadata } from "next"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Header } from "@/components/header"
@@ -18,7 +19,7 @@ const sections = [
     id: "configuration",
     title: "Configuration",
     icon: Settings,
-    description: "Configure CBOM Scanner for your environment",
+    description: "Configure QMCF Scanner for your environment",
   },
   {
     id: "cli-reference",
@@ -176,7 +177,7 @@ export default function DocsPage() {
             {/* Sidebar */}
             <aside className="lg:w-64 flex-shrink-0">
               <div className="sticky top-32">
-                <h2 className="text-lg font-semibold text-white mb-4">Documentation</h2>
+                <h2 className="text-lg font-semibold text-white mb-4">QMCF Documentation</h2>
                 <nav className="space-y-1">
                   {sections.map((section) => (
                     <button

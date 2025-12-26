@@ -8,9 +8,9 @@ import { SecurityCertificationsSection } from "@/components/security-certificati
 import { TestimonialsSection } from "@/components/testimonials-section"
 
 export const metadata: Metadata = {
-  title: "Pricing - Rivic Quantum-Safe Banking Security | Enterprise PQC Migration Plans",
-  description: "Transparent pricing for quantum-safe banking migration. Open source CBOM scanner, Premium Q-Hook runtime, Enterprise IBM attestation. ROI calculator included. Save millions vs manual migration.",
-  keywords: ["quantum-safe pricing", "PQC migration cost", "enterprise security pricing", "banking security budget", "eIDAS 2.0 cost"],
+  title: "Pricing - QMCF Quantum Mesh Cryptographic Foundation | Enterprise Quantum-Safe Security Plans",
+  description: "Transparent pricing for QMCF quantum-safe banking security. Open source CBOM scanner, Premium enterprise features, IBM Quantum attestation. ROI calculator included. Save millions vs manual migration.",
+  keywords: ["qmcf pricing", "quantum mesh cryptographic foundation cost", "quantum-safe pricing", "PQC migration cost", "enterprise security pricing", "banking security budget", "eIDAS 2.0 cost"],
 }
 
 export default function PricingPage() {
@@ -22,10 +22,10 @@ export default function PricingPage() {
         <section className="py-20 px-4 text-center">
           <div className="container mx-auto max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              QMCF Pricing Plans
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Choose the right plan for your quantum-safe migration journey. Start with open source, scale to enterprise.
+              Choose the right Quantum Mesh Cryptographic Foundation plan for your quantum-safe migration journey. Start with open source, scale to enterprise.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">
               <span className="text-green-400 text-sm font-medium">
