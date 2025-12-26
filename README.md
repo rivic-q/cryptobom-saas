@@ -3,16 +3,8 @@
 > **Leading open source CBOM platform for EU banking quantum security compliance**
 
 [![Deploy to GitHub Pages](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml/badge.svg)](https://github.com/rivic-q/cryptobom-saas/actions/workflows/deploy.yml)
-### **🏢 Support Tiers**
-- 🆓 **Open Source Community** - GitHub Issues, Discussions, Email Support
-- 💼 **Professional Support** - Priority email support (Available February 2026)
-- 🏢 **Enterprise Support** - Dedicated support team (Available February 2026)
-
-### **📱 Connect With Us**
-- 📧 **Email**: [rivic.revanande@gmail.com](mailto:rivic.revanande@gmail.com)
-- 🐙 **GitHub**: [@rivic-q](https://github.com/rivic-q)
-- 💼 **LinkedIn**: [Connect with Revanande](https://linkedin.com/in/revanande)
-- 🌐 **Website**: [Coming Soon - rivic.io](https://rivic-q.github.io/cryptobom-saas)ertified](https://img.shields.io/badge/NIST-FIPS%20203%2F204%2F205-blue?style=flat-square)](https://csrc.nist.gov/projects/post-quantum-cryptography)
+[![Sync to Private Repo](https://github.com/rivic-q/cryptobom-saas/actions/workflows/sync-to-private.yml/badge.svg)](https://github.com/rivic-q/cryptobom-saas/actions/workflows/sync-to-private.yml)
+[![NIST Certified](https://img.shields.io/badge/NIST-FIPS%20203%2F204%2F205-blue?style=flat-square)](https://csrc.nist.gov/projects/post-quantum-cryptography)
 [![eIDAS 2.0 Ready](https://img.shields.io/badge/eIDAS%202.0-Compliant-green?style=flat-square)](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 [![DORA Ready](https://img.shields.io/badge/DORA-Compliant-green?style=flat-square)](https://www.digital-operational-resilience-act.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -21,6 +13,38 @@
 
 ## 🌐 **Live Demo**
 **Visit**: [https://rivic-q.github.io/cryptobom-saas](https://rivic-q.github.io/cryptobom-saas)
+
+---
+
+## 🔄 **CI/CD Pipeline**
+
+### **Streamlined Development Process**
+Our CI/CD pipeline automatically synchronizes open source components with enterprise development while maintaining strict security boundaries.
+
+#### **Public Repository (This Repo)**
+- ✅ **Open Source Components** - CBOM scanner, documentation, community tools
+- ✅ **GitHub Pages Deployment** - Automatic deployment of demo site  
+- ✅ **Security Scanning** - Automated vulnerability detection
+- ✅ **Community Integration** - Issue templates, PR workflows, discussions
+
+#### **Private Repository Integration**
+- 🔄 **Automated Sync** - Documentation and API specs sync to private enterprise repo
+- 🔒 **Security Boundaries** - Enterprise features remain private
+- 📊 **Sync Reports** - Automated reports on synchronization status  
+- 🚨 **Failure Alerts** - Immediate notification of sync issues
+
+#### **Setup CI/CD Pipeline**
+```bash
+# Run the automated setup script
+./setup-cicd-pipeline.sh
+
+# Or manually configure:
+# 1. Create private repository: rivic-q/rivic-enterprise
+# 2. Add GitHub secrets: PRIVATE_REPO_TOKEN  
+# 3. Configure sync workflows
+```
+
+📋 **[View Complete Sync Configuration](./SYNC_CONFIG.md)**
 
 ---
 

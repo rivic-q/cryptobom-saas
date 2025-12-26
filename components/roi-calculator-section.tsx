@@ -227,7 +227,7 @@ export function ROICalculatorSection() {
                 Contact us to learn more about CryptoBOM and quantum-safe migration solutions.
               </p>
               <a
-                href="mailto:rivic.revanande@gmail.com?subject=ROI%20Calculator%20Demo%20Request&body=Hi%20Revanande,%0A%0AI'm%20interested%20in%20learning%20more%20about%20CryptoBOM%20and%20quantum-safe%20migration%20for%20my%20organization.%0A%0AOrganization%20Details:%0A-%20Institution%20Size:%20%0A-%20Assets:%20%0A-%20Current%20Security%20Budget:%20%0A%0APlease%20let%20me%20know%20when%20we%20can%20schedule%20a%20discussion.%0A%0ABest%20regards"
+                href="mailto:rivic.revan.ande@gmail.com?subject=ROI%20Calculator%20Demo%20Request&body=Hi%20Revanande,%0A%0AI'm%20interested%20in%20learning%20more%20about%20CryptoBOM%20and%20quantum-safe%20migration%20for%20my%20organization.%0A%0AOrganization%20Details:%0A-%20Institution%20Size:%20%0A-%20Assets:%20%0A-%20Current%20Security%20Budget:%20%0A%0APlease%20let%20me%20know%20when%20we%20can%20schedule%20a%20discussion.%0A%0ABest%20regards"
                 className="inline-flex items-center justify-center w-full px-4 py-2 bg-cyan-500 text-black font-medium rounded-lg hover:bg-cyan-400 transition-colors"
               >
                 Contact Us

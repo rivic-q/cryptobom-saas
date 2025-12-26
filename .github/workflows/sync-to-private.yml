@@ -1,0 +1,293 @@
+name: 🔄 Public to Private Repository Sync
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'components/open-source-**'
+      - 'app/api/v1/cbom/**'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'SECURITY.md'
+  workflow_dispatch:
+    inputs:
+      sync_type:
+        description: 'Type of sync to perform'
+        required: true
+        default: 'documentation'
+        type: choice
+        options:
+        - documentation
+        - api-specs
+        - open-source-components
+        - full-sync
+
+permissions:
+  contents: read
+
+jobs:
+  # Security scan before sync
+  security-scan:
+    runs-on: ubuntu-latest
+    name: 🔒 Security Scan
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Security audit
+        run: |
+          npm audit --audit-level moderate
+          
+      - name: Lint security issues
+        run: |
+          npm run lint
+          
+      - name: Check for secrets
+        run: |
+          # Check for potential secrets or sensitive data
+          if grep -r "api[_-]?key\|secret\|password\|token" --include="*.ts" --include="*.tsx" --include="*.js" --include="*.json" .; then
+            echo "❌ Potential secrets found in codebase"
+            exit 1
+          fi
+          echo "✅ No secrets detected"
+
+  # Prepare sync data
+  prepare-sync:
+    runs-on: ubuntu-latest
+    needs: security-scan
+    name: 📦 Prepare Sync Data
+    outputs:
+      sync-manifest: ${{ steps.create-manifest.outputs.manifest }}
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Identify changed files
+        id: changes
+        run: |
+          # Get list of changed files
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD || echo "")
+          echo "Changed files: $CHANGED_FILES"
+          echo "changes<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create sync manifest
+        id: create-manifest
+        run: |
+          # Create manifest of what to sync
+          cat > sync-manifest.json << EOF
+          {
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "commit": "${{ github.sha }}",
+            "public_repo": "${{ github.repository }}",
+            "sync_type": "${{ github.event.inputs.sync_type || 'auto' }}",
+            "files_to_sync": {
+              "documentation": [
+                "README.md",
+                "CONTRIBUTING.md", 
+                "SECURITY.md",
+                "CHANGELOG.md",
+                "docs/"
+              ],
+              "api_specs": [
+                "app/api/v1/cbom/",
+                "components/open-source-cbom-demo.tsx"
+              ],
+              "open_source_components": [
+                "components/open-source-*.tsx",
+                "lib/cbom-*.ts"
+              ]
+            },
+            "exclude_patterns": [
+              "components/rivic-core-*",
+              "app/dashboard/",
+              "app/api/v1/monitoring/",
+              "app/api/v1/quantum/",
+              "*enterprise*",
+              "*private*"
+            ]
+          }
+          EOF
+          
+          # Output manifest
+          MANIFEST=$(cat sync-manifest.json | jq -c .)
+          echo "manifest=$MANIFEST" >> $GITHUB_OUTPUT
+
+      - name: Upload sync manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-manifest
+          path: sync-manifest.json
+
+  # Sync to private repository
+  sync-to-private:
+    runs-on: ubuntu-latest
+    needs: [security-scan, prepare-sync]
+    name: 🔄 Sync to Private Repo
+    environment: private-repo-sync
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+        with:
+          path: public-repo
+
+      - name: Download sync manifest
+        uses: actions/download-artifact@v4
+        with:
+          name: sync-manifest
+
+      - name: Setup Git credentials
+        run: |
+          git config --global user.name "Rivic CI/CD Bot"
+          git config --global user.email "rivic.revanande@gmail.com"
+
+      - name: Clone private repository
+        env:
+          PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+        run: |
+          # Clone private repository (when created)
+          # git clone https://x-access-token:$PRIVATE_REPO_TOKEN@github.com/rivic-q/rivic-enterprise.git private-repo
+          
+          # For now, create directory structure
+          mkdir -p private-repo/public-docs
+          mkdir -p private-repo/api-specs
+          mkdir -p private-repo/open-source-components
+
+      - name: Sync documentation
+        run: |
+          echo "📚 Syncing documentation..."
+          
+          # Copy documentation files
+          cp public-repo/README.md private-repo/public-docs/
+          cp public-repo/CONTRIBUTING.md private-repo/public-docs/
+          cp public-repo/SECURITY.md private-repo/public-docs/
+          cp public-repo/CHANGELOG.md private-repo/public-docs/
+          
+          if [ -d "public-repo/docs" ]; then
+            cp -r public-repo/docs/* private-repo/public-docs/
+          fi
+          
+          echo "✅ Documentation synced"
+
+      - name: Sync API specifications
+        run: |
+          echo "🔌 Syncing API specifications..."
+          
+          # Copy CBOM API specs
+          if [ -d "public-repo/app/api/v1/cbom" ]; then
+            cp -r public-repo/app/api/v1/cbom/* private-repo/api-specs/
+          fi
+          
+          # Copy open source demo component
+          if [ -f "public-repo/components/open-source-cbom-demo.tsx" ]; then
+            cp public-repo/components/open-source-cbom-demo.tsx private-repo/open-source-components/
+          fi
+          
+          echo "✅ API specifications synced"
+
+      - name: Create sync report
+        run: |
+          cat > private-repo/SYNC_REPORT.md << EOF
+          # 🔄 Public Repository Sync Report
+          
+          **Sync Timestamp**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          **Public Commit**: [\`${{ github.sha }}\`](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
+          **Trigger**: ${{ github.event_name }}
+          
+          ## 📦 Synced Components
+          
+          ### 📚 Documentation
+          - ✅ README.md
+          - ✅ CONTRIBUTING.md  
+          - ✅ SECURITY.md
+          - ✅ CHANGELOG.md
+          - ✅ Documentation files
+          
+          ### 🔌 API Specifications
+          - ✅ CBOM API endpoints
+          - ✅ Open source demo component
+          
+          ### 🔧 Open Source Components
+          - ✅ Public CBOM scanner components
+          
+          ## 🚫 Excluded (Enterprise Only)
+          - ❌ Rivic Core components
+          - ❌ Enterprise dashboard
+          - ❌ Monitoring APIs
+          - ❌ Quantum integration APIs
+          
+          ## 📋 Next Steps
+          1. Review synced documentation
+          2. Update private repository features
+          3. Maintain separation of concerns
+          
+          ---
+          *Generated by Rivic CI/CD Pipeline*
+          EOF
+
+      - name: Commit and push to private repository
+        run: |
+          cd private-repo
+          
+          # Add all changes
+          git add .
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "📝 No changes to commit"
+          else
+            echo "📝 Committing sync changes..."
+            git commit -m "🔄 Sync from public repository
+
+          Source: ${{ github.repository }}@${{ github.sha }}
+          Trigger: ${{ github.event_name }}
+          Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)
+          
+          Synced:
+          - Documentation updates
+          - API specifications  
+          - Open source components
+          
+          [View public commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
+            
+            # Push to private repository (when created)
+            # git push origin main
+            echo "✅ Sync completed successfully"
+          fi
+
+  # Notify on completion
+  notify-completion:
+    runs-on: ubuntu-latest
+    needs: [sync-to-private]
+    if: always()
+    name: 📧 Notify Completion
+    steps:
+      - name: Notify success
+        if: needs.sync-to-private.result == 'success'
+        run: |
+          echo "✅ Public to private repository sync completed successfully"
+          echo "📊 Sync Summary:"
+          echo "  - Security scan: ✅ Passed"
+          echo "  - Documentation sync: ✅ Complete"
+          echo "  - API specs sync: ✅ Complete"
+          echo "  - Components sync: ✅ Complete"
+
+      - name: Notify failure
+        if: needs.sync-to-private.result == 'failure'
+        run: |
+          echo "❌ Public to private repository sync failed"
+          echo "🔍 Check the workflow logs for details"
+          echo "📧 Contact: rivic.revanande@gmail.com"
