@@ -47,7 +47,7 @@ export function PartnerLogos() {
           viewport={{ once: true }}
         >
           <p className="text-sm text-white/50 uppercase tracking-widest mb-2">Strategic Technology Partners</p>
-          <h3 className="text-xl font-semibold text-white">Enterprise-Grade Partnership Ecosystem</h3>
+          <h3 className="text-xl font-semibold text-white">Professional Partnership Ecosystem</h3>
         </motion.div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">

@@ -94,7 +94,7 @@ export function TestimonialsSection() {
             <span className="text-emerald-400 text-sm font-medium">Trusted by EU Financial Leaders</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-            Enterprise-Ready Quantum Protection
+            Quantum Mesh Cryptographic Foundation
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Leading EU institutions choose CryptoBOM SaaS for comprehensive quantum-safe migration. 

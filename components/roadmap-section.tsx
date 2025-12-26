@@ -45,7 +45,6 @@ const phases = [
 
 const milestones = [
   { date: "Dec 2025", event: "Documentation & advisors complete", done: true },
-  { date: "Jun 2026", event: "$5M Series A funding close", done: false },
   { date: "Sep 2026", event: "eIDAS 2.0 deadline compliance", done: false },
   { date: "Q1 2027", event: "GA launch & first enterprise customers", done: false },
 ]
@@ -67,7 +66,7 @@ export function RoadmapSection() {
           </div>
           <h2 className="text-4xl font-bold text-white mb-4">Development Timeline</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From core platform to enterprise release - our path to quantum-safe infrastructure
+            From core platform to production release - our path to quantum-safe infrastructure
           </p>
         </motion.div>
 

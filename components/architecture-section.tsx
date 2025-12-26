@@ -75,7 +75,7 @@ export function ArchitectureSection() {
             Three-Layer Architecture
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Enterprise-grade quantum-safe migration with full CNCF stack integration and IBM attestation support
+            Quantum-safe migration with full CNCF stack integration and IBM attestation support
           </p>
         </motion.div>
 

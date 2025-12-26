@@ -101,7 +101,7 @@ export function SecurityCertificationsSection() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full mb-6">
             <Shield className="w-4 h-4 text-green-400" />
-            <span className="text-green-400 text-sm font-medium">Enterprise-Grade Security</span>
+            <span className="text-green-400 text-sm font-medium">Professional-Grade Security</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
             Certified & Compliant
@@ -159,7 +159,7 @@ export function SecurityCertificationsSection() {
           <div className="text-center">
             <div className="text-3xl font-bold text-cyan-400 mb-2">99.99%</div>
             <div className="text-sm font-medium text-gray-300 mb-1">Uptime SLA</div>
-            <div className="text-xs text-gray-500">Enterprise-grade reliability</div>
+            <div className="text-xs text-gray-500">Professional reliability</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>

@@ -143,7 +143,7 @@ export function ProblemSolutionSection() {
                   <Shield className="w-6 h-6 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white">PQC Migration Framework</h3>
                 </div>
-                <p className="text-white/70 mb-4">Enterprise-grade quantum migration with IBM attestation support.</p>
+                <p className="text-white/70 mb-4">Quantum-safe migration with IBM attestation support.</p>
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>

@@ -1,15 +1,9 @@
 import Link from "next/link"
 import { RivicLogo } from "./rivic-logo"
-import { Github, Linkedin, Twitter, Instagram, Mail, MapPin, Phone, ExternalLink } from "lucide-react"
+import { Github, Twitter, Instagram, Mail, MapPin, Phone, ExternalLink } from "lucide-react"
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/rivic-q", label: "rivic-q (Open Source)" },
-  {
-    name: "LinkedIn",
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/revan-sai-ande-988504127",
-    label: "Revan Ande",
-  },
   { name: "Twitter", icon: Twitter, href: "https://twitter.com/RivicSecurity", label: "@RivicSecurity" },
   { name: "Instagram", icon: Instagram, href: "https://instagram.com/rivic.security", label: "@rivic.security" },
 ]
@@ -49,7 +43,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-2">
             <RivicLogo className="mb-4 sm:mb-6" />
             <p className="text-sm sm:text-base text-white/70 mb-4 sm:mb-6 max-w-md leading-relaxed">
-              Quantum-Safe Secure Platform (QSSP) for EU banking. Enterprise-grade cryptographic infrastructure with
+              Quantum Mesh Cryptographic Foundation (QMCF) for EU banking. Advanced cryptographic infrastructure with
               zero-code migration, full compliance, and IBM Quantum attestation.
             </p>
             <p className="text-sm text-white/50 italic mb-6">"Building Quantum-Safe Security for Tomorrow"</p>
@@ -195,11 +189,6 @@ export function Footer() {
               <li>
                 <a href="mailto:press@rivic.io" className="hover:text-cyan-400 transition-colors">
                   Press
-                </a>
-              </li>
-              <li>
-                <a href="mailto:investors@rivic.io" className="hover:text-cyan-400 transition-colors">
-                  Investors
                 </a>
               </li>
             </ul>

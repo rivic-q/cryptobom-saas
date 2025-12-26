@@ -399,7 +399,7 @@ export function CNCFPage() {
                 IBM Quantum Cloud Integration
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enterprise quantum attestation and post-quantum cryptography validation 
+                Quantum attestation and post-quantum cryptography validation 
                 powered by IBM's quantum computing infrastructure.
               </p>
             </motion.div>
