@@ -25,29 +25,30 @@ const partners = [
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10 py-16 px-4">
-      <div className="container mx-auto">
-        {/* Partners Banner */}
-        <div className="mb-12 pb-12 border-b border-white/10">
-          <p className="text-center text-sm text-white/40 mb-6">Strategic Technology Partners & Certifications</p>
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+    <footer className="bg-black border-t border-white/10 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
+        {/* Partners Banner - Enhanced responsive */}
+        <div className="mb-10 sm:mb-12 lg:mb-16 pb-8 sm:pb-12 border-b border-white/10">
+          <p className="text-center text-xs sm:text-sm text-white/40 mb-4 sm:mb-6">Strategic Technology Partners & Certifications</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6 max-w-4xl mx-auto">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-center sm:text-left"
               >
-                <span className={`text-${partner.color}-400 font-bold`}>{partner.name}</span>
+                <span className={`text-${partner.color}-400 font-bold text-sm sm:text-base`}>{partner.name}</span>
                 <span className="text-white/40 text-xs">{partner.label}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <RivicLogo className="mb-4" />
-            <p className="text-white/70 mb-4 max-w-md leading-relaxed">
+        {/* Main Footer Content - Enhanced responsive grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
+          {/* Brand Section - Enhanced responsive */}
+          <div className="sm:col-span-2 lg:col-span-2">
+            <RivicLogo className="mb-4 sm:mb-6" />
+            <p className="text-sm sm:text-base text-white/70 mb-4 sm:mb-6 max-w-md leading-relaxed">
               Quantum-Safe Secure Platform (QSSP) for EU banking. Enterprise-grade cryptographic infrastructure with
               zero-code migration, full compliance, and IBM Quantum attestation.
             </p>

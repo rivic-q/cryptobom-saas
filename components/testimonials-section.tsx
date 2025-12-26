@@ -79,11 +79,11 @@ const metrics: Metric[] = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-20 px-4 bg-gradient-to-b from-gray-950 to-black">
-      <div className="container mx-auto">
-        {/* Header */}
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-950 to-black">
+      <div className="container mx-auto max-w-7xl">
+        {/* Header - Responsive */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

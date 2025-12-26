@@ -66,11 +66,12 @@ const pricingPlans = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-20 px-4 bg-black">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
+    <section id="pricing" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-black">
+      <div className="container mx-auto max-w-7xl">
+        {/* Header - Responsive */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <motion.h2
-            className="text-4xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +81,7 @@ export function PricingSection() {
             Go-To-Market Pricing
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -90,12 +91,15 @@ export function PricingSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Pricing Cards - Enhanced responsive grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              className={`relative bg-card border rounded-lg p-8 ${
-                plan.popular ? "border-cyan-500/50 bg-cyan-500/5" : "border-border/20 bg-background/50"
+              className={`relative bg-card border rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:scale-105 ${
+                plan.popular 
+                  ? "border-cyan-500/50 bg-cyan-500/5 shadow-xl shadow-cyan-500/10" 
+                  : "border-border/20 bg-background/50 hover:border-border/40"
               }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
