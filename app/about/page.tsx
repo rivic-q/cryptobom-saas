@@ -69,9 +69,9 @@ export default function AboutPage() {
                 About QMCF
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                The Quantum Mesh Cryptographic Foundation (QMCF) is Europe's leading 
-                quantum-safe security platform, protecting financial institutions from 
-                the emerging quantum computing threat.
+                The Quantum Mesh Cryptographic Foundation (QMCF) implements the Quantum-Safe Security Protocol (QSSP) 
+                framework, Europe's leading standard for quantum-resistant financial infrastructure. QMCF protects 
+                institutions from the emerging quantum computing threat through transparent cryptographic modernization.
               </p>
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/20 rounded-full">
                 <Heart className="w-5 h-5 text-red-400" />
@@ -94,10 +94,10 @@ export default function AboutPage() {
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                To secure Europe's financial future by providing zero-code quantum-safe 
-                cryptographic migration solutions that enable banks to protect their customers' 
-                data against both current and future threats, ensuring compliance with 
-                eIDAS 2.0 and DORA regulations.
+                To secure Europe's financial future through the Quantum-Safe Security Protocol (QSSP) framework, 
+                enabling banks to achieve quantum resistance with zero code changes while ensuring full compliance 
+                with eIDAS 2.0 and DORA regulations. We protect customer data against both current and future 
+                quantum computing threats.
               </p>
             </motion.div>
 

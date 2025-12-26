@@ -6,9 +6,9 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "What is Rivic Q-Runtime and how does it work?",
+    question: "What is the QSSP Framework and how does it work?",
     answer:
-      "Rivic Q-Runtime is a transparent, observable, and quantum-safe cryptographic layer for EU banking infrastructure. It uses a three-layer architecture: Build-Time Inspector (CBOM scanner), Runtime Interceptor (LD_PRELOAD injection), and Governance Plane (Kubernetes Operator). This enables compliance with eIDAS 2.0 and DORA without requiring any application code changes.",
+      "The Quantum-Safe Security Protocol (QSSP) Framework is a comprehensive three-layer architecture: CBOM Discovery Engine (cryptographic inventory), QSSP Runtime (transparent PQC enforcement), and QMCF Governance Plane (enterprise policy management). This enables eIDAS 2.0 and DORA compliance without requiring any application code changes.",
   },
   {
     question: "What is the 'Harvest-Now-Decrypt-Later' (HNDL) threat?",
@@ -16,14 +16,14 @@ const faqs = [
       "HNDL is a quantum computing threat where attackers harvest encrypted data today (banking records, KYC documents, transaction history) with the intent to decrypt it once cryptographically relevant quantum computers (CRQC) arrive around 2030-2035. Since banking data must be retained for 50+ years, today's RSA-2048 encrypted data is at risk.",
   },
   {
-    question: "How does Rivic achieve zero code changes?",
+    question: "How does QSSP achieve zero code changes?",
     answer:
-      "Rivic uses LD_PRELOAD injection via a Kubernetes Mutating Webhook. Our librivic.so shared library intercepts OpenSSL/BoringSSL crypto calls at runtime and transparently upgrades them to quantum-safe algorithms (ML-KEM-1024, ML-DSA-65). Your application code remains unchanged while crypto operations are automatically upgraded.",
+      "QSSP Framework uses LD_PRELOAD injection via a Kubernetes Mutating Webhook. Our QSSP Runtime library intercepts OpenSSL/BoringSSL crypto calls at runtime and transparently upgrades them to quantum-safe algorithms (ML-KEM-1024, ML-DSA-65). Your application code remains unchanged while crypto operations are automatically upgraded to QSSP-compliant algorithms.",
   },
   {
-    question: "What algorithms does Rivic support?",
+    question: "What algorithms does QSSP Framework support?",
     answer:
-      "Rivic supports NIST-approved post-quantum algorithms: ML-KEM (FIPS 203) for key encapsulation, ML-DSA (FIPS 204) for digital signatures, and SLH-DSA (FIPS 205) for stateless hash-based signatures. We also support hybrid mode (X25519 + Kyber-1024) for backward compatibility with non-PQC systems.",
+      "QSSP Framework supports NIST-approved post-quantum algorithms: ML-KEM (FIPS 203) for key encapsulation, ML-DSA (FIPS 204) for digital signatures, and SLH-DSA (FIPS 205) for stateless hash-based signatures. We also support hybrid mode (X25519 + Kyber-1024) for backward compatibility with non-PQC systems during the transition period.",
   },
   {
     question: "What is CBOM and why is it important?",

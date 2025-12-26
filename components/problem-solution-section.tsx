@@ -29,21 +29,21 @@ export function ProblemSolutionSection() {
               <h3 className="text-xl font-semibold text-white mb-3">Harvest Now, Decrypt Later (HNDL)</h3>
               <p className="text-white/70">
                 Adversaries are harvesting encrypted financial data today, waiting for quantum computers to decrypt it.
-                Your 2024 transactions could be exposed by 2030.
+                Current RSA-2048 and ECDSA-P256 will be broken by Shor's algorithm by 2030-2035.
               </p>
             </div>
             <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-white mb-3">Regulatory Deadline: Sept 2026</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">QSSP Migration Urgency</h3>
               <p className="text-white/70">
-                eIDAS 2.0 mandates quantum-safe cryptography for EU financial services. Non-compliance means €20M+ fines
-                and loss of banking license.
+                eIDAS 2.0 mandates quantum-safe cryptography by September 2026. Financial institutions must implement
+                QSSP-compliant algorithms or face €20M+ fines and banking license suspension.
               </p>
             </div>
             <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-white mb-3">Manual Migration is Impossible</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure Complexity</h3>
               <p className="text-white/70">
-                Average bank has 500+ crypto touchpoints. Manual audit takes 18+ months. Most banks don't even know
-                where their cryptography lives.
+                Legacy banking systems use cryptography at hundreds of integration points. Traditional migration 
+                requires 18+ months of code rewrites across applications, databases, and APIs.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export function ProblemSolutionSection() {
               <Shield className="w-6 h-6 text-cyan-400" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "var(--font-playfair)" }}>
-              Our Solution
+              QSSP Framework Solution
             </h2>
           </div>
 
@@ -73,18 +73,18 @@ export function ProblemSolutionSection() {
                 <h3 className="text-xl font-semibold text-white">Zero-Code Migration</h3>
               </div>
               <p className="text-white/70">
-                Rivic's transparent proxy architecture upgrades RSA/ECDSA to ML-KEM/ML-DSA without touching your source
-                code. Deploy in hours, not years.
+                QSSP Framework uses transparent cryptographic interception via Q-Hook runtime. RSA/ECDSA operations
+                are automatically upgraded to ML-KEM/ML-DSA without application code changes.
               </p>
             </div>
             <div className="p-6 bg-cyan-500/5 border border-cyan-500/20 rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <Lock className="w-5 h-5 text-cyan-400" />
-                <h3 className="text-xl font-semibold text-white">NIST FIPS Compliant</h3>
+                <h3 className="text-xl font-semibold text-white">QSSP Protocol Standard</h3>
               </div>
               <p className="text-white/70">
-                Built on NIST-standardized algorithms (FIPS 203, 204, 205). Hybrid mode ensures backward compatibility
-                while providing quantum resistance.
+                Implements NIST-approved post-quantum algorithms (FIPS 203/204/205) within the QSSP framework.
+                Multi-layer security architecture ensures compliance with eIDAS 2.0 and DORA regulations.
               </p>
             </div>
           </div>

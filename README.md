@@ -44,7 +44,7 @@ CryptoBOM SaaS meets the most stringent EU and international regulatory requirem
 
 ## �🎯 **Overview**
 
-**Rivic** is the leading quantum-safe cryptographic migration platform designed specifically for EU banking and financial services. Our transparent, zero-code-change solution protects against the quantum computing threat while ensuring full compliance with eIDAS 2.0 and DORA regulations.
+**Rivic** is the leading Quantum-Safe Security Protocol (QSSP) Framework designed specifically for EU banking and financial services. Our transparent, zero-code-change solution protects against the quantum computing threat while ensuring full compliance with eIDAS 2.0 and DORA regulations.
 
 ### 🚨 **The Quantum Threat is Real**
 - **Harvest Now, Decrypt Later (HNDL)** attacks are happening today

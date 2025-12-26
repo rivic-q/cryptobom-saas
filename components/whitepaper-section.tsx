@@ -88,8 +88,9 @@ export function WhitepaperSection() {
             Quantum Mesh Cryptographic Foundation
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Comprehensive technical whitepaper covering QMCF architecture, post-quantum cryptography 
-            implementation, and enterprise migration strategies for EU financial institutions.
+            Comprehensive technical documentation of the QSSP (Quantum-Safe Security Protocol) framework, 
+            post-quantum cryptography implementation strategies, and enterprise migration guidelines for 
+            EU financial institutions seeking quantum resistance.
           </p>
           
           {/* Download CTA */}

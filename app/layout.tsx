@@ -5,9 +5,9 @@ import ClientLayout from "./ClientLayout"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "QMCF - Quantum Mesh Cryptographic Foundation | EU Banking Quantum-Safe Security Platform",
+  title: "QMCF - Quantum-Safe Security Protocol (QSSP) Framework | EU Banking Quantum Protection",
   description:
-    "Quantum Mesh Cryptographic Foundation (QMCF) - Leading quantum-safe security platform for EU banking. Zero-code post-quantum cryptography migration, CBOM scanning, eIDAS 2.0 & DORA compliance. Enterprise-ready quantum protection.",
+    "Quantum Mesh Cryptographic Foundation (QMCF) implements the QSSP Framework for zero-code quantum-safe migration. ML-KEM/ML-DSA algorithms, eIDAS 2.0 & DORA compliance. Enterprise quantum protection in weeks, not years.",
   keywords: [
     "quantum mesh cryptographic foundation",
     "qmcf platform",

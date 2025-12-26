@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Particle Animation - Responsive sizing */}
       <div className="flex-1 flex items-start justify-center pt-16 sm:pt-20 lg:pt-24">
         <div className="w-full max-w-7xl">
-          <ParticleTextEffect words={["RIVIC", "QUANTUM", "SECURE", "BANKING"]} />
+          <ParticleTextEffect words={["QSSP", "QUANTUM", "SECURE", "PROTOCOL", "ML-KEM", "ML-DSA", "QMCF", "eIDAS", "DORA"]} />
         </div>
       </div>
 
@@ -19,7 +19,7 @@ export function HeroSection() {
         <div className="max-w-6xl mx-auto">
           {/* Main Headline - Responsive typography */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 text-balance leading-tight">
-            Quantum-Safe Banking Infrastructure.{" "}
+            Quantum-Safe Security Protocol Framework.{" "}
             <span className="text-gray-300 block sm:inline mt-2 sm:mt-0">Zero Code Changes. Full Compliance.</span>
           </h2>
 

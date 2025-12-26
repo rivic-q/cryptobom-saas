@@ -6,11 +6,11 @@ import { Scan, Cpu, Shield, Database, Lock, FileCode, ArrowRight, CheckCircle2 }
 const layers = [
   {
     id: "layer-1",
-    title: "Layer 1: CBOM Scanner",
-    subtitle: "Build-Time Cryptography Inspector",
+    title: "Layer 1: CBOM Discovery Engine",
+    subtitle: "Build-Time Cryptographic Asset Inventory",
     icon: Scan,
     color: "emerald",
-    description: "Comprehensive cryptographic inventory generation at build time",
+    description: "Comprehensive cryptographic inventory generation following QSSP specifications",
     features: [
       "Source code AST analysis for crypto calls",
       "Binary inspection with symbol table parsing",
@@ -23,11 +23,11 @@ const layers = [
   },
   {
     id: "layer-2",
-    title: "Layer 2: Q-Hook Runtime",
-    subtitle: "Zero-Code Crypto Interception",
+    title: "Layer 2: QSSP Runtime",
+    subtitle: "Quantum-Safe Protocol Enforcement",
     icon: Cpu,
     color: "cyan",
-    description: "Transparent runtime upgrade of legacy cryptography to PQC",
+    description: "Runtime protocol enforcement implementing QSSP framework for transparent PQC upgrade",
     features: [
       "LD_PRELOAD injection for OpenSSL/BoringSSL",
       "Transparent RSA → ML-KEM upgrade",
@@ -40,11 +40,11 @@ const layers = [
   },
   {
     id: "layer-3",
-    title: "Layer 3: Governance Plane",
-    subtitle: "Kubernetes-Native Policy Engine",
+    title: "Layer 3: QMCF Governance Plane",
+    subtitle: "Enterprise Policy & Compliance Engine",
     icon: Shield,
     color: "purple",
-    description: "Enterprise compliance and observability for PQC migration",
+    description: "QMCF-compliant enterprise governance for QSSP deployment and regulatory compliance",
     features: [
       "Kubernetes Operator for PQC policies",
       "Prometheus metrics & Grafana dashboards",
