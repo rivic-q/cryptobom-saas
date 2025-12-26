@@ -1,0 +1,9 @@
+{
+  "name": "CryptoBOM Implementation Navigator",
+  "description": "A high-fidelity dashboard mapping the CBOM methodology to cloud-native CryptoBOM implementation, featuring risk scoring, compliance tracking, and AI-powered policy analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
