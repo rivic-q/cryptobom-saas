@@ -1,5 +1,30 @@
-# 🔒 CryptoBOM ## 🎯 **Overview**
+# 🔒 CryptoBOM ## 🎯 **Overvi### 💡 **Our Solution**
+- 🔍 **CBOM Scanner** - Complete cryptographic asset discovery and analysis
+- 📊 **SaaS Dashboard** - Cloud-based cryptographic inventory management
+- 🔗 **Open Source Core** - Transparent, community-driven CBOM generation
+- 🇪🇺 **EU Compliance First** - Built for eIDAS 2.0, DORA, CRA, and BSI requirements
+- 🏛️ **Regulatory Ready** - BSI TR-02102, NIST PQC (FIPS 203/204/205) compliant
 
+## 🏛️ **Regulatory Compliance**
+
+CryptoBOM SaaS meets the most stringent EU and international regulatory requirements:
+
+### 🇩🇪 **BSI Germany**
+- ✅ **BSI TR-02102**: Cryptographic mechanisms and key lengths
+- ✅ **BSI TR-03116**: Digital signature cryptographic requirements
+- ✅ **CBOM Guidelines**: Machine-readable cryptographic inventories
+
+### 🇺🇸 **NIST Standards**
+- ✅ **FIPS 203**: ML-KEM (Kyber) post-quantum key encapsulation
+- ✅ **FIPS 204**: ML-DSA (Dilithium) post-quantum signatures
+- ✅ **FIPS 205**: SLH-DSA (SPHINCS+) hash-based signatures
+
+### 🇪🇺 **EU Regulations**
+- ✅ **DORA**: Digital Operational Resilience Act compliance
+- ✅ **CRA**: Cyber Resilience Act essential requirements
+- ✅ **eIDAS 2.0**: Quantum-safe cryptography timeline (Jan 2027)
+
+📋 **[View Complete Compliance Documentation](./COMPLIANCE.md)**
 **CryptoBOM SaaS** is the leading open source Cryptographic Bill of Materials platform designed specifically for EU banking and financial services. Our comprehensive scanning and analysis solution provides full visibility into cryptographic assets while ensuring quantum-safe migration and compliance with eIDAS 2.0 and DORA regulations.
 
 ### 🚨 **The Quantum Threat is Real**- Quantum-Safe Cryptographic Bill of Materials

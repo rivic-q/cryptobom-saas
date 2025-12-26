@@ -5,18 +5,24 @@ import ClientLayout from "./ClientLayout"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "CryptoBOM SaaS - Quantum-Safe CBOM Scanner | Open Source Cryptographic Asset Discovery",
+  title: "CryptoBOM SaaS - EU Regulatory Compliant CBOM Scanner | BSI, NIST PQC, DORA, CRA Ready",
   description:
-    "Leading open source Cryptographic Bill of Materials platform for EU banking. Complete crypto asset discovery, quantum-safe analysis, eIDAS 2.0 & DORA compliance. Deploy CBOM scanning in minutes, get full visibility into cryptographic risks.",
+    "Leading regulatory compliant Cryptographic Bill of Materials platform. BSI TR-02102, NIST FIPS 203/204/205, DORA, CRA, and eIDAS 2.0 ready. Complete crypto asset discovery for EU banking quantum security compliance.",
   keywords: [
     "cryptographic bill of materials",
     "CBOM scanner", 
+    "regulatory compliance",
+    "BSI TR-02102",
+    "NIST FIPS 203",
+    "NIST FIPS 204", 
+    "NIST FIPS 205",
+    "DORA compliance",
+    "CRA cyber resilience act",
+    "eIDAS 2.0",
     "quantum-safe cryptography",
     "post-quantum cryptography",
     "crypto asset discovery",
     "EU banking security",
-    "eIDAS 2.0 compliance",
-    "DORA compliance",
     "open source CBOM",
     "cryptographic inventory", 
     "NIST FIPS 203",

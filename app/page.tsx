@@ -5,6 +5,7 @@ import { PartnerLogos } from "@/components/partner-logos"
 import { ProblemSolutionSection } from "@/components/problem-solution-section"
 import { ArchitectureSection } from "@/components/architecture-section"
 import { CompetitiveComparisonSection } from "@/components/competitive-comparison-section"
+import { RegulatoryComplianceSection } from "@/components/regulatory-compliance-section"
 import { OpenSourceSection } from "@/components/open-source-section"
 import { ComplianceDashboard } from "@/components/compliance-dashboard"
 import { SecurityCertificationsSection } from "@/components/security-certifications-section"
@@ -33,6 +34,7 @@ export default function HomePage() {
         
         {/* Competitive Advantage */}
         <CompetitiveComparisonSection />
+        <RegulatoryComplianceSection />
         <SecurityCertificationsSection />
         
         {/* Social Proof & Trust */}
