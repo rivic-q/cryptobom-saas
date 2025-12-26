@@ -51,12 +51,12 @@ const blogPosts = [
   },
   {
     slug: "founder-story-building-rivic",
-    title: "Founder Story: Why We Built Rivic",
+    title: "Founder Story: From Frankfurt to Berlin - Building Europe's Quantum-Safe Future",
     excerpt:
-      "From recognizing the quantum threat to building a solution for EU banking - the journey of creating Rivic and our mission to protect financial infrastructure.",
-    author: "Rivic Founders",
+      "The personal journey of Revan Sai Ande from discovering the quantum threat to building Rivic in Berlin. How a wake-up call in a Frankfurt bank meeting room led to Europe's quantum-safe banking revolution.",
+    author: "Revan Sai Ande, CEO & Founder",
     date: "2024-12-15",
-    readTime: "10 min read",
+    readTime: "12 min read",
     category: "Company",
     featured: true,
   },

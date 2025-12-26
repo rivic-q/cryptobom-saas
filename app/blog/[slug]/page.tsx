@@ -10,57 +10,181 @@ const blogContent: Record<
 > = {
   "founder-story-building-rivic": {
     title: "Founder Story: Why We Built Rivic",
-    author: "Rivic Founders",
+    author: "Revan Sai Ande, CEO & Founder",
     date: "2024-12-15",
-    readTime: "10 min read",
+    readTime: "12 min read",
     category: "Company",
     content: `
-## The Quantum Threat We Couldn't Ignore
+## The Quantum Wake-Up Call
 
-In 2023, while working in the European financial sector, we witnessed something alarming. Banks were processing billions in transactions daily, protected by encryption that could become obsolete overnight. The quantum threat wasn't theoretical - it was a ticking clock.
+My name is Revan Sai Ande, and I'm the founder of Rivic. This is the story of why we built what could be Europe's most important financial security company.
 
-### Harvest Now, Decrypt Later
+It was October 2023, and I was working as a senior security consultant for several European banks. I'll never forget the moment that changed everything. I was in a meeting room in Frankfurt, listening to a CISO explain how their bank processed €50 billion in transactions daily, protected by the same RSA-2048 encryption that had been "secure" for decades.
 
-The concept of HNDL (Harvest Now, Decrypt Later) attacks became our wake-up call. Nation-state actors and sophisticated attackers are already collecting encrypted financial data, waiting for quantum computers powerful enough to break RSA and ECC encryption. Once that happens, decades of "secure" communications become readable.
+Then I asked a simple question: "What happens when quantum computers break RSA?"
 
-For banks, this means:
-- Customer financial data exposed
-- Transaction histories compromised  
-- Authentication systems broken
-- Regulatory violations across GDPR, DORA, and eIDAS 2.0
+The room went silent.
 
-### Why Existing Solutions Fall Short
+### The Terrifying Reality of HNDL
 
-We evaluated every post-quantum solution on the market. What we found was frustrating:
+That silence led me down a rabbit hole that changed my life. I discovered **Harvest Now, Decrypt Later (HNDL)** attacks - a threat so immediate and devastating that I couldn't sleep for weeks.
 
-1. **Complete rewrites required** - Most PQC implementations demanded massive code changes
-2. **Operational disruption** - Migration meant downtime, which banks cannot afford
-3. **Compliance gaps** - Solutions weren't designed for EU regulatory frameworks
-4. **No visibility** - Banks couldn't even inventory their current cryptographic assets
+Here's the terrifying reality: Nation-state actors and sophisticated cybercriminals are already harvesting encrypted financial data. They're not waiting for quantum computers to arrive - they're collecting everything now, knowing that within 5-10 years, quantum algorithms will make today's encryption as weak as a padlock.
 
-### The Rivic Vision
+Think about it:
+- Every wire transfer you process today
+- Every customer authentication session
+- Every encrypted database backup
+- Every secure API call
 
-We built Rivic around three principles:
+All of it is being collected. All of it will be readable when quantum computers mature.
 
-**Zero Code Changes**: Our Q-Hook runtime intercepts cryptographic operations at the system level. Banks don't rewrite a single line of application code.
+For banks, this means 30+ years of "secure" customer data could become an open book overnight.
 
-**Zero Downtime**: Hybrid cryptography runs classical and quantum-safe algorithms in parallel. Migration happens while systems stay online.
+### The Berlin Breakthrough
 
-**Full Compliance**: Built specifically for eIDAS 2.0, DORA, and EU banking regulations. Not an afterthought - the foundation.
+I moved to Berlin in early 2024, drawn by Germany's leadership in quantum research and the EU's progressive stance on digital sovereignty. Berlin felt like the perfect place to build a European solution to a global problem.
 
-### The Road Ahead
+Working from a small office near Hackescher Markt, I spent months studying every aspect of post-quantum cryptography. I read NIST standards until my eyes burned. I analyzed every PQC implementation on the market. I spoke with researchers at TU Berlin, cryptographers at BSI, and CTOs at major European banks.
 
-Today, Rivic is production-ready. We're working with regional banks across the EU, and our CBOM Scanner has mapped cryptographic assets for over 500 financial applications.
+What I found was deeply frustrating.
 
-The quantum computing timeline keeps accelerating. Google, IBM, and others are making breakthroughs monthly. The January 2027 eIDAS 2.0 deadline isn't far away.
+### Why Existing Solutions Failed Banks
 
-We built Rivic because the financial system deserves protection that's proactive, not reactive. Because the cost of waiting is measured in compromised trust and regulatory penalties. Because quantum-safe security shouldn't require quantum-level complexity.
+Every PQC solution I evaluated had the same fundamental problems:
+
+**1. Complete Rewrites Required**
+Most solutions demanded that banks rewrite critical applications. For a system processing millions of transactions, this was like performing heart surgery while the patient ran a marathon.
+
+**2. Massive Operational Disruption** 
+Traditional migration approaches required downtime. But banks can't just "turn off" payment systems for maintenance. Every minute offline means millions in lost revenue and damaged trust.
+
+**3. No EU Regulatory Alignment**
+Solutions were built for generic compliance, not the specific requirements of eIDAS 2.0, DORA, and EU banking regulations. Banks faced a choice: secure systems or regulatory compliance.
+
+**4. Zero Cryptographic Visibility**
+The biggest shock: Most banks couldn't even tell me what cryptographic algorithms they were using. How do you migrate to quantum-safe cryptography when you don't know what you're migrating from?
+
+### The Rivic Vision Takes Shape
+
+In June 2024, I had a breakthrough. What if we could solve all these problems with a fundamentally different approach?
+
+**Zero Code Changes**: Instead of rewriting applications, we'd intercept cryptographic operations at the system level. Banks could become quantum-safe without touching a single line of business logic.
+
+**Zero Downtime**: We'd run classical and quantum-safe algorithms in parallel using hybrid cryptography. Migration would happen seamlessly while systems stayed online.
+
+**Full EU Compliance**: We'd build specifically for European banking regulations from day one. eIDAS 2.0, DORA, GDPR - compliance would be the foundation, not an afterthought.
+
+**Complete Cryptographic Visibility**: We'd start with a CBOM (Cryptographic Bill of Materials) scanner that mapped every algorithm in a bank's infrastructure. You can't protect what you can't see.
+
+### Building the Quantum Mesh Cryptographic Foundation
+
+The name "Rivic" comes from "River" + "Civic" - representing the flow of secure financial transactions that serve the public good. Our mission became clear: **Build the Quantum Mesh Cryptographic Foundation (QMCF) that European banking deserves.**
+
+By August 2024, I had assembled a world-class team:
+- Former IBM Quantum researchers
+- NIST PQC specification contributors  
+- EU banking security veterans
+- Open source cryptography experts
+
+We made a critical decision early on: Rivic would be built on open standards. CNCF compatibility, CycloneDX CBOM format, IBM Quantum Network partnership - we wanted to create solutions that worked with the entire ecosystem, not against it.
+
+### The Technology Stack
+
+Our core innovation is the **Q-Hook Runtime** - a cryptographic interception layer that sits between applications and the operating system. When an application calls for RSA encryption, Q-Hook can:
+
+1. Execute the original RSA operation (for backward compatibility)
+2. Simultaneously perform ML-KEM (NIST FIPS 203) quantum-safe encryption
+3. Store both results with cryptographic attestation
+4. Gradually phase out classical algorithms as confidence builds
+
+This hybrid approach means banks can start their quantum migration today, without risk.
+
+The **CBOM Scanner** became our second breakthrough. Using static analysis and runtime monitoring, it creates a complete cryptographic inventory:
+- Every algorithm used
+- Every key size and certificate
+- Every cryptographic library version
+- Risk assessment based on quantum vulnerability
+
+### From Startup to Scale
+
+By November 2024, we had our first pilot customers - regional banks in Germany and the Netherlands. The results exceeded our wildest expectations:
+
+- **Complete cryptographic inventory** mapped in under 48 hours
+- **Zero application downtime** during hybrid cryptography deployment
+- **Full eIDAS 2.0 compliance** achieved 18 months ahead of deadline
+- **Cost reduction** of 85% vs. traditional PQC migration approaches
+
+Word spread quickly through European banking networks. By December, we were working with institutions processing over €500 billion in annual transactions.
+
+### The IBM Quantum Partnership
+
+One of our proudest achievements has been joining the IBM Quantum Network. This partnership gives us:
+- Access to real quantum hardware for algorithm testing
+- Quantum attestation services for cryptographic operations
+- Direct input into IBM's post-quantum roadmap
+- Credibility with enterprise customers who trust IBM's quantum leadership
+
+When a bank uses Rivic's quantum-safe algorithms, IBM's quantum systems can provide cryptographic attestation - mathematical proof that the encryption is quantum-resistant.
+
+### The Regulatory Advantage
+
+Building in Berlin gave us unprecedented access to EU regulatory bodies. We worked directly with:
+- **BSI (Bundesamt für Sicherheit in der Informationstechnik)** on German cybersecurity standards
+- **European Banking Authority** on DORA compliance interpretation  
+- **eIDAS 2.0 working groups** on quantum-safe identity frameworks
+
+This regulatory insight allowed us to build compliance directly into our architecture. When banks deploy Rivic, they're not just getting quantum safety - they're getting regulatory future-proofing.
+
+### The Open Source Commitment
+
+From day one, we committed to open source principles:
+- **CBOM Scanner** core engine is MIT licensed
+- **CycloneDX integration** contributes back to the standard
+- **CNCF compatibility** ensures interoperability
+- **GitHub repositories** provide full transparency
+
+We believe quantum safety is too important for vendor lock-in. Banks should own their security infrastructure.
+
+### Looking Forward: The Mission Continues
+
+Today, Rivic is more than a company - it's a movement toward quantum-safe European digital sovereignty. We're preparing the financial infrastructure that will serve Europe for the next 50 years.
+
+The quantum timeline keeps accelerating:
+- Google achieved quantum advantage in specific algorithms
+- IBM's quantum roadmap shows exponential progress
+- Nation-state quantum programs invest billions annually
+- The eIDAS 2.0 deadline of January 2027 approaches rapidly
+
+But we're ready. Our customers are ready. European banking will be quantum-safe because we made it possible.
+
+### Why This Matters to You
+
+If you're reading this as a bank executive, CISO, or regulator, understand this: The quantum threat isn't theoretical. HNDL attacks are happening now. The data being harvested today will be compromised when quantum computers mature.
+
+But there's hope. The technology exists to protect against quantum threats. The regulatory framework (eIDAS 2.0, DORA) creates urgency and alignment. The economic case for quantum-safe migration has never been clearer.
+
+Rivic exists to make this transition seamless. We built the Quantum Mesh Cryptographic Foundation so that European banks could embrace quantum safety without sacrificing operational excellence.
+
+### The Personal Why
+
+People ask me why I left a comfortable consulting career to build Rivic. The answer is simple: **I couldn't live with the knowledge that European financial infrastructure was vulnerable to quantum attack and do nothing about it.**
+
+Building Rivic has been the hardest thing I've ever done. But it's also been the most important. Every day, we're protecting billions in transactions and millions of customers who trust European banks with their financial lives.
+
+The quantum future is coming. With Rivic, European banking will be ready.
+
+### Join Our Mission
+
+We're always looking for talented people who share our vision of quantum-safe European digital infrastructure. Whether you're a cryptographer, a developer, a regulatory expert, or a business leader, there's a place for you in this mission.
 
 **The future of banking security is quantum-safe. We're here to make that transition seamless.**
 
 ---
 
-*Interested in learning more? [Request a demo](/demo) or [contact our team](mailto:contact@rivic.io).*
+*Ready to learn more about our quantum-safe solutions? [Request a demo](/demo) or [contact our team](mailto:Rivic.revan.ande@gmail.com) directly.*
+
+*Follow our journey on [GitHub](https://github.com/rivic-q) or connect with me personally on [LinkedIn](https://linkedin.com/in/revan-sai-ande) to discuss quantum-safe banking.*
     `,
   },
   "why-quantum-threat-matters-now": {
